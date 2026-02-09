@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rainbo | Our Story</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #f8f6ef;
+      color: #2c2c2c;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(248,246,239,0.95);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: #2c2c2c;
+    }
+
+    .topbar a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      overflow: hidden;
+      margin-top: 70px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Left-align the text */
+      padding-left: 40px;          /* Space from the left edge */
+      color: white;
+      font-size: 36px;
+      letter-spacing: 0.5px;
+    }
+
+    /* INTRO */
+    .intro {
+      max-width: 900px;
+      margin: 120px auto;
+      padding: 0 40px;
+    }
+
+    .intro p:first-child {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .intro h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+
+    .intro p:last-child {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    /* FOUNDER */
+    .founder {
+      max-width: 1100px;
+      margin: 0 auto 140px;
+      padding: 0 40px;
+    }
+
+    .founder-note {
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+
+    .founder-images {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .founder-images img {
+      width: 50%;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    .founder-text {
+      line-height: 1.8;
+      font-size: 17px;
+      max-width: 900px;
+    }
+
+    /* VALUES SECTION */
+    .values {
+      max-width: 1000px;
+      margin: 100px auto;
+      padding: 0 40px;
+      text-align: left; /* changed from center to left */
+    }
+
+    .values img {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .values p {
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-left,
+      .nav-right {
+        gap: 16px;
+        font-size: 13px;
+      }
+
+      .logo {
+        display: none;
+      }
+
+      .hero {
+        height: 60vh;
+      }
+
+      .hero-title {
+        font-size: 28px;
+      }
+
+      .intro h1 {
+        font-size: 36px;
+      }
+
+      .founder-images {
+        flex-direction: column;
+      }
+
+      .founder-images img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <nav class="nav-left">
+      <a href="shop.html">Shop</a>
+      <a href="learn.html">Learn</a>
+      <a href="#">Rainbo World</a>
+    </nav>
+
+    <div class="logo"></div>
+
+    <nav class="nav-right">
+      <a href="#">Take the Quiz</a>
+      <a href="#">Reviews</a>
+      <a href="#">🔍</a>
+      <a href="#">Login</a>
+      <a href="#">Cart (0)</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/learn-hero-bg.jpg" alt="Our Story Banner">
+    <div class="hero-title">Our Story</div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>Welcome</p>
+
+    <h1>
+      Rainbo is your space for <em>optimizing</em> your mind,
+      body and spirit with fungi.
+    </h1>
+
+    <p>
+      We offer potent and high quality <em>adaptogenic</em> mushrooms
+      to bring radical health and harmony to people and the planet.
+    </p>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder">
+    <div class="founder-note">
+      <em>A note from our Founder,</em><br>
+      <strong>Tonya Papanikolov</strong>
+    </div>
+
+    <div class="founder-images">
+      <img src="images/learn-founder.jpg" alt="Founder">
+      <img src="images/learn-mushroom.jpg" alt="Mushroom">
+    </div>
+
+    <div class="founder-text">
+      Rainbo was born in 2018 in my Toronto apartment after many transformative
+      experiences with fungi, but the spores of awareness were planted much earlier.
+      My journey with fungi first began in 2011 brewing mushroom tea and reconnecting
+      to nature in the Canadian forests. It was in this season that I knew mushrooms
+      would be with me for the rest of my life. They became and still are instrumental
+      in my healing journey, and I know they can be for yours, too.
+      <br><br>
+      For many years I struggled with digestive issues and immune dysregulation.
+      Mentally, I was anxious and in a constant cycle of stress and brain fog—in
+      retrospect I was existing in a general state of disconnection. After failed
+      attempts at feeling better via traditional western medicine, my world shifted
+      as I adopted mind-body practices, changed my diet and began taking mushrooms
+      functionally.
+      <br><br>
+      I created Rainbo to spread mushrooms to the masses and get people healthier and
+      more deeply connected to nature. Mushrooms have shown me that whole-person
+      healing is possible—that balance between all parts of ourselves and our social
+      and natural environments is within grasp.
+      <br><br>
+      The great metaphor of what mushrooms represent in nature is both my—and
+      Rainbo’s—raison d’être: resilience, cooperation, and the unfathomable magnitude
+      of nature’s intelligence and interconnectedness. These fungal organisms contain
+      some of the secrets to life as they network and weave wisdom into the collective
+      consciousness.
+      <br><br>
+      I’m so happy our journeys have converged at this moment in time because now is
+      the time. Thank you for being here and welcome to our Rainbo world.
+      <br><br>
+      <strong>Tonya Papanikolov</strong><br>
+      Holistic Nutritionist<br>
+      Kundalini Yoga Practitioner<br>
+      M.S Mind-Body Medicine Student
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="intro">
+    <h1>Our Manifesto</h1>
+
+    <p>
+      Because eventually, we’ll all go back to fungi.<br>
+      This is our cosmic trip.
+      <br><br>
+      In through nature, out through nature. What we do in between is our calling.
+      Because eventually, we’ll see there was no separation—only a collective chance
+      for interdependence.
+      <br><br>
+      We are fungal advocates. We see the unseen and know the unknown.
+      <br><br>
+      We are human nature potentiators. The path forward to human and planetary
+      health is ours to hold, nourish and remember.
+      <br><br>
+      We are guided by
+    </p>
+  </section>
+
+  <!-- VALUES IMAGE SECTION -->
+  <section class="values">
+    <img src="images/learn-values.png" alt="Rainbo Guiding Principles">
+    <p>
+      The quality of our mushrooms, our people, our supply chain and beyond is directly
+      connected to our quest for integrity. We opt for the highest quality, most
+      sustainable everything because it’s how we ensure a positive impact on people
+      and the planet.
+    </p>
+  </section>
+
+</body>
+</html>

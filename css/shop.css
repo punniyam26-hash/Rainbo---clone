@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f9f7f2;
+    color: #111;
+}
+
+/* HEADER */
+.topbar {
+    height: 70px;
+    background: #ffffff;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.topbar nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.topbar nav a.active {
+    font-weight: 700;
+}
+
+.right a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #111;
+}
+
+/* BANNER */
+.shop-banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.shop-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TITLE */
+.shop-title {
+    padding: 50px 60px 20px;
+}
+
+.shop-title h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.shop-title p {
+    color: #555;
+}
+
+/* GRID */
+.shop-grid {
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 18px;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.product-card .subtitle {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #c9a227;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.rating span {
+    color: #555;
+    font-size: 14px;
+}
+
+.price {
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #556b45;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+    background: #445637;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+
+    .shop-title {
+        padding: 40px 30px 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-title h1 {
+        font-size: 36px;
+    }
+}
