@@ -1,20 +1,13 @@
-// Simple fade-in animation on scroll (optional)
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
 
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      section.style.opacity = 1;
-      section.style.transform = "translateY(0)";
-    }
-  });
+hamburger.addEventListener("click", () => {
+  mobileMenu.style.display =
+    mobileMenu.style.display === "block" ? "none" : "block";
 });
 
-// initial styles
-sections.forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = "translateY(40px)";
-  section.style.transition = "all 0.8s ease";
+mobileMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.style.display = "none";
+  });
 });

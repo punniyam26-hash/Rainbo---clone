@@ -10,15 +10,19 @@
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="topbar">
   <div class="header-left">
+
     <div class="logo">RAINBO</div>
 
-    <!-- Space added only here -->
-    <nav class="main-nav" style="margin-left: 40px;">
-      <a href="shop.html" style="margin-right: 35px;">Shop</a>
-      <a href="learn.html" style="margin-right: 35px;">Learn</a>
-      <a href="Rainbo.html" style="margin-right: 35px;">Rainbo World</a>
+    <!-- ☰ MOBILE MENU ICON -->
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="shop.html">Shop</a>
+      <a href="learn.html">Learn</a>
+      <a href="Rainbo.html">Rainbo World</a>
       <a href="#">Subscribe + Save</a>
     </nav>
   </div>
@@ -30,14 +34,21 @@
   </div>
 </header>
 
+<!-- ================= HERO / BANNER ================= -->
 <section class="hero">
   <div class="hero-text">
     <h1>Get Fungki. Stay Sweet.</h1>
-    <p>Sweeten your ritual. <b>FREE Forest Juice</b> on all orders $95+.</p>
-    <button class="primary-btn">TRY FUNGKI + FUNGKI COFFEE</button>
+    <p>
+      Sweeten your ritual.
+      <b>FREE Forest Juice</b> on all orders $95+.
+    </p>
+    <button class="primary-btn">
+      TRY FUNGKI + FUNGKI COFFEE
+    </button>
   </div>
 </section>
 
+<!-- ================= SHOP ================= -->
 <section class="shop">
   <h2>Shop by benefit</h2>
 
@@ -53,46 +64,47 @@
       <img src="images/product1.png" alt="">
       <h3>Fungki Mushroom Coffee</h3>
       <p>Nootropic • Low Acid • 47mg Caffeine</p>
-      <button>SHOP NOW</button>
+      <button class="shop-btn">SHOP NOW</button>
     </div>
 
     <div class="product-card" data-type="stress">
       <img src="images/product2.png" alt="">
       <h3>Herbal Mushroom Coffee</h3>
       <p>Caffeine Free • Adaptogens</p>
-      <button>SHOP NOW</button>
+      <button class="shop-btn">SHOP NOW</button>
     </div>
 
     <div class="product-card" data-type="sleep">
       <img src="images/product3.png" alt="">
       <h3>Calm Blend</h3>
       <p>Sleep • Relax • Restore</p>
-      <button>SHOP NOW</button>
+      <button class="shop-btn">SHOP NOW</button>
     </div>
 
     <div class="product-card" data-type="energy">
       <img src="images/product4.png" alt="">
       <h3>Daily Energy</h3>
       <p>Focus • Stamina</p>
-      <button>SHOP NOW</button>
+      <button class="shop-btn">SHOP NOW</button>
     </div>
 
     <div class="product-card" data-type="energy">
       <img src="images/stack1.jpg" alt="">
       <h3>Daily Energy</h3>
       <p>Focus • Stamina</p>
-      <button>SHOP NOW</button>
+      <button class="shop-btn">SHOP NOW</button>
     </div>
 
     <div class="product-card" data-type="energy">
       <img src="images/stack2.jpg" alt="">
       <h3>Daily Energy</h3>
       <p>Focus • Stamina</p>
-      <button>SHOP NOW</button>
+      <button class="shop-btn">SHOP NOW</button>
     </div>
   </div>
 </section>
 
+<!-- ================= STATEMENT ================= -->
 <section class="statement">
   <p class="small">Heal your body, elevate humanity.</p>
 
@@ -107,10 +119,12 @@
   </h3>
 </section>
 
+<!-- ================= BOTTLE IMAGE ================= -->
 <section class="bottle-section">
   <img src="images/bottles.jpg" alt="">
 </section>
 
+<!-- ================= PROCESS ================= -->
 <section class="process">
   <div>
     <h3>Our Process</h3>
@@ -123,6 +137,7 @@
   </div>
 </section>
 
+<!-- ================= PROMISES ================= -->
 <section class="promises">
   <div class="promise-card">🌱 Vegan</div>
   <div class="promise-card">🧬 Non GMO</div>
@@ -130,10 +145,12 @@
   <div class="promise-card">🌍 Climate Neutral</div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Rainbo Clone – Static Website</p>
 </footer>
 
+<!-- ================= TAB FILTER SCRIPT ================= -->
 <script>
   const tabs = document.querySelectorAll(".tab");
   const cards = document.querySelectorAll(".product-card");
@@ -152,15 +169,15 @@
   });
 </script>
 
-</body>
-</html>
+<!-- ================= MOBILE MENU SCRIPT ================= -->
 <script>
-  const navLinks = document.querySelectorAll(".main-nav a");
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
 
-  navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-      navLinks.forEach(l => l.classList.remove("active"));
-      this.classList.add("active");
-    });
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
   });
 </script>
+
+</body>
+</html>

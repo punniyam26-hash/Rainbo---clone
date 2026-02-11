@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
+/* ================= BASE ================= */
 *{
   margin:0;
   padding:0;
@@ -20,155 +21,180 @@ body{
   color:#111;
 }
 
-/* ✅ HERO WALLPAPER */
-.heading{
-  text-align:center;
-  padding:120px 20px;
-  background:url("./images/wallpaper.jpg") center/cover no-repeat;
-  color:#fff;
-}
-
-.heading h1{
-  font-size:120px;
-  font-weight:900;
-  line-height:1;
-  text-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
+/* ================= NAVBAR ================= */
 nav{
   background:#fff;
-  padding:20px 60px;
+  padding:16px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+/* MOBILE DEFAULT – hide nav links */
+.nav-left,
+.nav-right{
+  display:none;
+  align-items:center;
+  gap:20px;
 }
 
 nav a{
   text-decoration:none;
   color:#111;
-  margin-right:25px;
   font-size:15px;
+  font-weight:500;
 }
 
-nav a:hover{
-  color:#e2529b;
+nav a.active{
+  background:#e2529b;
+  color:#fff;
+  padding:6px 14px;
+  border-radius:20px;
 }
 
-.right, .left{
-  display:flex;
-  align-items:center;
+/* ===== MENU BUTTON ===== */
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
 }
 
+/* ===== MOBILE MENU ===== */
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:#fff;
+  padding:20px;
+  border-bottom:1px solid #eee;
+}
+
+.mobile-menu a{
+  padding:12px 0;
+  border-bottom:1px solid #f2f2f2;
+  font-weight:600;
+  color:#111;
+}
+
+/* ================= HERO ================= */
+.heading{
+  background:#fff;
+  text-align:center;
+  padding:140px 20px;
+}
+
+.heading h1{
+  font-size:96px;
+  font-weight:900;
+  line-height:1;
+  color:#111;
+}
+
+/* ================= SECTION ================= */
 section{
-  padding:60px;
+  padding:40px 20px;
 }
 
 .pod{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .pod h1{
-  font-size:40px;
+  font-size:32px;
 }
 
 .learn{
   text-decoration:none;
-  color:#000;
   font-weight:600;
+  color:#111;
 }
 
+/* ================= CARDS ================= */
 .card-com{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
+  grid-template-columns:1fr;
+  gap:24px;
 }
 
 .card{
   background:#fff;
   border-radius:20px;
   overflow:hidden;
-  transition:0.3s;
+  transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+  transform:translateY(-4px);
+  box-shadow:0 12px 25px rgba(0,0,0,.1);
 }
 
 .card img{
   width:100%;
-  height:250px;
+  height:200px;
   object-fit:cover;
 }
 
 .card-content{
-  padding:20px;
+  padding:18px;
 }
 
 .card-title{
-  font-size:14px;
+  font-size:13px;
   color:#777;
-  margin-bottom:10px;
+  margin-bottom:6px;
 }
 
 .card-text{
-  font-size:18px;
+  font-size:17px;
   font-weight:600;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 .card-button{
   text-decoration:none;
   font-weight:600;
-  color:#111;
-}
-
-.card-button:hover{
   color:#e2529b;
 }
 
-/* ✅ FOOTER STYLE */
+/* ================= FOOTER ================= */
 .footer{
   background:#111;
   color:#fff;
-  padding:80px 60px 30px;
+  padding:60px 20px 30px;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:40px;
+  grid-template-columns:1fr;
+  gap:30px;
 }
 
 .footer h4{
-  margin-bottom:20px;
+  margin-bottom:14px;
 }
 
 .footer a{
   display:block;
   color:#ccc;
   text-decoration:none;
-  margin-bottom:10px;
+  margin-bottom:8px;
   font-size:14px;
 }
 
-.footer a:hover{
-  color:#fff;
-}
-
 .subscribe-box{
-  margin-top:15px;
   display:flex;
+  margin-top:10px;
 }
 
 .subscribe-box input{
   padding:10px;
   border:none;
-  width:200px;
+  width:100%;
 }
 
 .subscribe-box button{
@@ -176,62 +202,57 @@ section{
   border:none;
   background:#e2529b;
   color:#fff;
-  cursor:pointer;
 }
 
 .footer-bottom{
   text-align:center;
-  margin-top:40px;
+  margin-top:30px;
   font-size:13px;
   color:#aaa;
 }
 
-/* ✅ RESPONSIVE */
-@media(max-width:1024px){
-  .heading h1{
-    font-size:80px;
-  }
-  .card-com{
-    grid-template-columns:repeat(2,1fr);
-  }
-  .footer-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+/* ================= TABLET / LAPTOP ================= */
+@media(min-width:768px){
+  .menu-btn{ display:none; }
+
+  .nav-left,
+  .nav-right{ display:flex; }
+
+  nav{ padding:20px 60px; }
+
+  section{ padding:60px; }
+
+  .heading h1{ font-size:120px; }
+
+  .card-com{ grid-template-columns:repeat(2,1fr); }
+
+  .card img{ height:240px; }
+
+  .footer-grid{ grid-template-columns:repeat(3,1fr); }
+
+  .mobile-menu{ display:none !important; }
 }
 
-@media(max-width:768px){
-  nav{
-    flex-direction:column;
-    gap:10px;
-    padding:20px;
-  }
-  .heading h1{
-    font-size:60px;
-  }
-  section{
-    padding:30px 20px;
-  }
-  .card-com{
-    grid-template-columns:1fr;
-  }
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
+@media(min-width:1024px){
+  .card-com{ grid-template-columns:repeat(4,1fr); }
+  .footer-grid{ grid-template-columns:repeat(5,1fr); }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= NAV ================= -->
 <nav>
-  <div class="right">
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-left">
     <a href="shop.html">Shop</a>
     <a href="learn.html">Learn</a>
-    <a href="Rainbo.html" style="background:#e2529b;color:#fff;padding:6px 14px;border-radius:20px;">Rainbo World</a>
-   
+    <a href="Rainbo.html" class="active">Rainbo World</a>
   </div>
 
-  <div class="left">
+  <div class="nav-right">
     <a href="#">Take the Quiz</a>
     <a href="#">Reviews</a>
     <a href="#">Login</a>
@@ -239,105 +260,57 @@ section{
   </div>
 </nav>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="shop.html">Shop</a>
+  <a href="learn.html">Learn</a>
+  <a href="Rainbo.html">Rainbo World</a>
+  <a href="#">Take the Quiz</a>
+  <a href="#">Reviews</a>
+  <a href="#">Login</a>
+  <a href="#">Cart</a>
+</div>
+
+<!-- ================= HERO ================= -->
 <section class="heading">
   <h1>Rainbo</h1>
   <h1>World</h1>
 </section>
 
+<!-- ================= PODCAST ================= -->
 <section>
   <div class="pod">
     <h1>Podcast</h1>
-    <a class="learn" href="#">Learn more →</a>
+    <a href="#" class="learn">Learn more →</a>
   </div>
 
   <div class="card-com">
-
-    <!-- ✅ 17 CARDS WORKING -->
-    <!-- Make sure images exist inside images folder -->
-
-    <!-- 1 -->
-    <div class="card">
-      <img src="./images/image-1.jpg" alt="">
-      <div class="card-content">
-        <p class="card-title">January 15, 2026</p>
-        <h2 class="card-text">Podcast Title 1</h2>
-        <a href="#" class="card-button">Listen now →</a>
-      </div>
-    </div>
-
-    <!-- 2 to 17 -->
-    <!-- Just ensure image names correct -->
-
-    <!-- Repeat cards -->
-    
-    <!-- (All remaining cards same structure as yours, unchanged) -->
-<!-- 2 -->
-    <div class="card">
-      <img src="./images/image2.jpg">
-      <div class="card-content">
-        <p class="card-title">January 2026</p>
-        <h2 class="card-text">Podcast Title 2</h2>
-        <a href="#" class="card-button">Listen now →</a>
-      </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="card">
-      <img src="./images/image3.jpg">
-      <div class="card-content">
-        <p class="card-title">January 2026</p>
-        <h2 class="card-text">Podcast Title 3</h2>
-        <a href="#" class="card-button">Listen now →</a>
-      </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="card">
-      <img src="./images/image4.jpg">
-        <div class="card-content">
-        <p class="card-title">January 2026</p>
-        <h2 class="card-text">Podcast Title 4</h2>
-        <a href="#" class="card-button">Listen now →</a>
-      </div>
-    </div>
-
-    <!-- 5 - 17 -->
-    <!-- Just changing image numbers -->
-
+    <!-- 17 CARDS -->
+    <div class="card"><img src="./images/image-1.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 1</h2><a href="#" class="card-button">Listen now →</a></div></div>
+    <div class="card"><img src="./images/image2.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 2</h2><a href="#" class="card-button">Listen now →</a></div></div>
+    <div class="card"><img src="./images/image3.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 3</h2><a href="#" class="card-button">Listen now →</a></div></div>
+    <div class="card"><img src="./images/image4.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 4</h2><a href="#" class="card-button">Listen now →</a></div></div>
     <div class="card"><img src="./images/image5.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 5</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image6.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 6</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image7.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 7</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image9.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 9</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image10.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 10</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image11.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 11</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image12.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 12</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image13.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 13</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image14.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 14</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image15.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 15</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image16.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 16</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
     <div class="card"><img src="./images/image17.jpg"><div class="card-content"><p class="card-title">2026</p><h2 class="card-text">Podcast Title 17</h2><a href="#" class="card-button">Listen now →</a></div></div>
-
   </div>
 </section>
 
-
-
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-grid">
     <div>
       <h4>Curious Shroomers</h4>
-      <p>Receive 15% off your first order and be the first to know about new products.</p>
+      <p>Receive 15% off your first order.</p>
       <div class="subscribe-box">
         <input type="email" placeholder="Email">
         <button>SUBSCRIBE</button>
@@ -346,7 +319,7 @@ section{
 
     <div>
       <h4>Account</h4>
-      <a href="#">Sign in/Create</a>
+      <a href="#">Sign in</a>
       <a href="#">Wholesale</a>
       <a href="#">Gift card</a>
     </div>
@@ -374,6 +347,13 @@ section{
     2026 © Rainbo™. All Rights Reserved.
   </div>
 </footer>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
 
 </body>
 </html>

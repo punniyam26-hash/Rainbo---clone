@@ -29,16 +29,24 @@ body {
 .header-left {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .logo {
-  font-weight: 700;
   font-size: 22px;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
-/* ================= NAVIGATION ================= */
+/* ☰ MENU ICON */
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ================= NAV ================= */
 
 .main-nav {
   display: flex;
@@ -47,39 +55,17 @@ body {
 
 .main-nav a {
   text-decoration: none;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
   padding: 8px 18px;
   border-radius: 999px;
-  transition: all 0.3s ease;
   color: #000;
-  background: transparent;   /* 🔥 Default no color */
+  transition: 0.3s;
 }
 
-/* Hover effect */
 .main-nav a:hover {
   background: #f0efe9;
 }
-
-/* 🎨 ACTIVE COLORS (Click panna varum) */
-
-.main-nav a.active:nth-child(1) {
-  background: #6080eb;   /* Shop - Soft Blue */
-}
-
-.main-nav a.active:nth-child(2) {
-  background: #efae35;   /* Learn - Peach */
-}
-
-.main-nav a.active:nth-child(3) {
-  background: #72f8bb;   /* Rainbo World - Mint */
-}
-
-.main-nav a.active:nth-child(4) {
-  background: #f977dd;   /* Subscribe - Pink */
-}
-
-/* ================= HEADER RIGHT ================= */
 
 .header-right {
   display: flex;
@@ -90,7 +76,6 @@ body {
 .header-right a {
   text-decoration: none;
   color: #000;
-  font-weight: 500;
   font-size: 14px;
 }
 
@@ -131,17 +116,12 @@ body {
   padding: 14px 30px;
   border-radius: 30px;
   border: none;
+  background: #ffffff;
   font-weight: 600;
   cursor: pointer;
-  background: #ffffff;
-  transition: 0.3s ease;
 }
 
-.primary-btn:hover {
-  background: #e5e5e5;
-}
-
-/* ================= SHOP SECTION ================= */
+/* ================= SHOP ================= */
 
 .shop {
   padding: 100px 80px;
@@ -152,13 +132,35 @@ body {
   margin-bottom: 30px;
 }
 
+/* ================= TABS ================= */
+
+.tabs {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #5c7c59;
+  color: #fff;
+}
+
 /* ================= PRODUCTS ================= */
 
 .products {
   display: flex;
   gap: 30px;
   overflow-x: auto;
-  padding-bottom: 10px;
   scrollbar-width: none;
 }
 
@@ -167,42 +169,95 @@ body {
 }
 
 .product-card {
-  background: #ffffff;
   min-width: 280px;
+  background: #ffffff;
   padding: 30px;
   border-radius: 28px;
   text-align: center;
-  transition: 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
+  transition: 0.3s;
 }
 
 .product-card img {
   width: 100%;
   height: 220px;
   object-fit: contain;
+  margin-bottom: 16px;
 }
 
-.product-card button {
-  margin-top: 16px;
+.product-card h3 {
+  font-size: 18px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* 🟢 SHOP NOW */
+
+.shop-btn {
+  margin-top: 14px;
   padding: 12px 26px;
   border-radius: 999px;
   border: none;
   background: #5c7c59;
   color: #fff;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.shop-btn:hover {
+  background: #4a6847;
+}
+
+/* ================= STATEMENT ================= */
+
+.statement {
+  padding: 120px 80px;
+  text-align: center;
+}
+
+.statement .small {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.statement h2 {
+  font-size: 32px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.statement span {
+  color: #5c7c59;
+}
+
+.statement h3 {
+  margin-top: 20px;
+  font-weight: 400;
+  color: #555;
+}
+
+/* ================= IMAGE ================= */
+
+.bottle-section {
+  padding: 80px;
+}
+
+.bottle-section img {
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
 }
 
 /* ================= PROCESS ================= */
 
 .process {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
   padding: 100px 80px;
+  display: flex;
+  gap: 60px;
   background: #faf9f6;
 }
 
@@ -226,55 +281,49 @@ body {
 /* ================= FOOTER ================= */
 
 footer {
-  text-align: center;
   padding: 30px;
   background: #eeeeee;
+  text-align: center;
   font-size: 14px;
 }
 
-/* ================= TABLET VIEW ================= */
+/* ================= TABLET ================= */
 
 @media (max-width: 1024px) {
-
-  .topbar {
-    padding: 16px 40px;
-  }
-
-  .hero {
-    padding: 0 40px;
-  }
-
+  .topbar { padding: 16px 40px; }
+  .hero { padding: 0 40px; }
   .shop,
+  .statement,
   .process,
-  .promises {
-    padding: 80px 40px;
-  }
-
-  .process {
-    flex-direction: column;
-  }
+  .promises,
+  .bottle-section { padding: 80px 40px; }
+  .process { flex-direction: column; }
 }
 
-/* ================= MOBILE VIEW ================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 20px;
-  }
-
-  .header-left {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+  .menu-toggle {
+    display: block;
   }
 
   .main-nav {
-    flex-wrap: wrap;
-    gap: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 12px;
   }
 
   .header-right {
@@ -283,17 +332,28 @@ footer {
   }
 
   .hero {
-    padding: 40px 24px;
     min-height: 65vh;
+    padding: 40px 24px;
+    background-position: center top;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .product-card img {
+    height: 160px;
   }
 
   .shop,
+  .statement,
   .process,
-  .promises {
+  .promises,
+  .bottle-section {
     padding: 60px 24px;
-  }
-
-  button {
-    min-height: 44px;
   }
 }

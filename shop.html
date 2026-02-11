@@ -34,27 +34,43 @@
 .option-btn{display:block;width:100%;margin-top:10px}
 </style>
 </head>
-
 <body>
 
-<header class="topbar">
-  <div style="display:flex;align-items:center;gap:30px">
-    <div class="logo">RAINBO</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html" class="active">Shop</a>
-      <a href="learn.html">Learn</a>
-      <a href="Rainbo.html">Rainbo World</a>
-    </nav>
+  <!-- Mobile Menu (only for mobile) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="Rainbo.html">Rainbo World</a>
   </div>
-  <div class="right" style="display:flex;gap:18px;align-items:center">
-    <a href="#" id="quizBtn">Take the Quiz</a>
-    <a href="#" id="reviewsBtn">Reviews</a>
-    <a href="#" id="searchBtn"><i class="fa fa-search"></i></a>
-    <a href="#" id="loginBtn">Login</a>
-    <span id="cartCount">Cart (0)</span>
-  </div>
-</header>
+
+  <header class="topbar">
+    <div class="left">
+      <div class="logo">RAINBO</div>
+
+      <button class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="learn.html">Learn</a>
+        <a href="Rainbo.html">Rainbo World</a>
+      </nav>
+    </div>
+
+    <div class="right">
+      <a href="#" id="quizBtn">Take the Quiz</a>
+      <a href="#" id="reviewsBtn">Reviews</a>
+      <a href="#" id="searchBtn"><i class="fa fa-search"></i></a>
+      <a href="#" id="loginBtn">Login</a>
+      <span id="cartCount">Cart (0)</span>
+    </div>
+  </header>
+
+  <!-- ✅ JS always here -->
+  <script src="js/shop.js"></script>
+</body>
 
 <section class="shop-banner">
   <img src="images/banner/shop-banner.jpg" alt="Shop Banner">
@@ -182,3 +198,4 @@ document.getElementById("rainboWorld").onclick=e=>{e.preventDefault();openModal(
     });
   });
 </script>
+

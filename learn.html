@@ -1,228 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Rainbo | Our Story</title>
+  <meta charset="UTF-8" />
+  <title>Rainbo | Our Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Georgia, serif;
-  background: #f8f6ef;
-  color: #2c2c2c;
-}
-
-/* TOPBAR */
-.topbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(248,246,239,0.95);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 40px;
-  z-index: 1000;
-  box-sizing: border-box;
-}
-
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  font-size: 14px;
-}
-
-.topbar a {
-  text-decoration: none;
-  color: #2c2c2c;
-}
-
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* HERO */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
-  margin-top: 70px;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-title {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  color: white;
-  font-size: 36px;
-}
-
-/* INTRO */
-.intro {
-  max-width: 900px;
-  margin: 120px auto;
-  padding: 0 40px;
-}
-
-.intro h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  font-weight: normal;
-}
-
-/* FOUNDER */
-.founder {
-  max-width: 1100px;
-  margin: 0 auto 140px;
-  padding: 0 40px;
-}
-
-.founder-images {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.founder-images img {
-  width: 50%;
-  border-radius: 14px;
-}
-
-.founder-text {
-  line-height: 1.8;
-  font-size: 17px;
-}
-
-/* ================= GUIDED SECTION ================= */
-
-.guided {
-  padding: 120px 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.guided h2 {
-  font-size: 28px;
-  margin-bottom: 60px;
-}
-
-.circles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  align-items: center;
-  justify-content: center;
-}
-
-.circle {
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #111;
-  text-align: center;
-}
-
-.quality { width: 260px; height: 260px; background:#8ea2d8; }
-.knowledge { width: 160px; height:160px; background:#a65a00; color:white;}
-.health { width:120px; height:120px; background:#5f6f4f; color:white;}
-.intention { width:180px; height:180px; background:#e04bb4; color:white;}
-.community { width:120px; height:120px; background:#8c7a00; color:white;}
-.integrity { width:200px; height:200px; background:#ff3b00; color:white;}
-
-/* ================= REMEMBER SECTION ================= */
-
-.remember {
-  background:#9a8417;
-  padding:100px 40px;
-  color:white;
-}
-
-.remember-container {
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  gap:60px;
-}
-
-.remember-text {
-  flex:1;
-}
-
-.remember-text h2 {
-  font-size:32px;
-}
-
-.remember-text button {
-  margin-top:20px;
-  padding:12px 24px;
-  border:none;
-  background:black;
-  color:white;
-  cursor:pointer;
-}
-
-.remember-images {
-  flex:1;
-  display:flex;
-  gap:20px;
-}
-
-.remember-images img {
-  width:33%;
-  border-radius:14px;
-  object-fit:cover;
-}
-
-/* ================= SUBSCRIBE ================= */
-
-.subscribe {
-  padding:80px 40px;
-  max-width:1000px;
-  margin:auto;
-}
-
-.subscribe input {
-  padding:12px;
-  width:250px;
-}
-
-.subscribe button {
-  padding:12px 20px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .founder-images { flex-direction:column; }
-  .founder-images img { width:100%; }
-  .remember-container { flex-direction:column; }
-}
-</style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/learn.css">
 </head>
 
 <body>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="shop.html">Shop</a>
+  <a href="learn.html">Learn</a>
+  <a href="Rainbo.html">Rainbo World</a>
+</div>
+
+<!-- TOP BAR -->
 <header class="topbar">
   <nav class="nav-left">
+    <button class="hamburger" id="hamburger">☰</button>
     <a href="shop.html">Shop</a>
-    <a href="learn.html">Learn</a>
+    <a href="learn.html" class="active">Learn</a>
     <a href="Rainbo.html">Rainbo World</a>
   </nav>
-  <div class="logo"></div>
+
+  <div class="logo">RAINBO</div>
+
   <nav class="nav-right">
     <a href="#">Take the Quiz</a>
     <a href="#">Reviews</a>
@@ -230,52 +36,34 @@ body {
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <img src="images/learn-hero-bg.jpg">
+  <img src="images/learn-hero-bg.jpg" alt="Hero Image">
   <div class="hero-title">Our Story</div>
 </section>
 
+<!-- INTRO -->
 <section class="intro">
   <h1>Welcome</h1>
   <p>Rainbo is your space for optimizing your mind, body and spirit with fungi.</p>
-  <p>We offer potent and high quality adaptogenic mushrooms to bring radical health and harmony to people and the planet.</p>
+  <p>We offer potent and high quality adaptogenic mushrooms.</p>
   <p><strong>A Note from our Founder,<br>Tonya Papanikolov</strong></p>
 </section>
 
+<!-- FOUNDER -->
 <section class="founder">
   <div class="founder-images">
     <img src="images/learn-founder.jpg">
     <img src="images/learn-mushroom.jpg">
   </div>
+
   <div class="founder-text">
-    <p>Rainbo was born in 2018 in my Toronto apartment after many transformative experiences with fungi, but the spores of awareness were planted much earlier. My journey with fungi first began in 2011 brewing mushroom tea and reconnecting to nature in the Canadian forests. It was in this season that I knew mushrooms would be with me for the rest of my life.</p>
-
-    <p>For many years I struggled with digestive issues and immune dysregulation. Mentally, I was anxious and in a constant cycle of stress and brain fog—in retrospect I was existing in a general state of disconnection. After failed attempts at feeling better via traditional western medicine, my world shifted as I adopted mind-body practices, changed my diet and began taking mushrooms functionally.</p>
-
-    <p>I created Rainbo to spread mushrooms to the masses and get people healthier and more deeply connected to nature. Mushrooms have shown me that whole-person healing is possible—that balance between all parts of ourselves and our social and natural environments is within grasp.</p>
-
-    <p>The great metaphor of what mushrooms represent in nature is both my—and Rainbo’s—raison d’être: resilience, cooperation, and the unfathomable magnitude of nature’s intelligence and interconnectedness.</p>
-
-    <p>I’m so happy our journeys have converged at this moment in time because now is the time. Thank you for being here and welcome to our Rainbo world.</p>
-
-    <p><strong>Tonya Papanikolov</strong><br>
-    Holistic Nutritionist<br>
-    Kundalini Yoga Practitioner<br>
-    M.S Mind-Body Medicine Student</p>
-
-    <p><strong>Our Manifesto</strong></p>
-
-    <p>Because eventually, we’ll all go back to fungi. This is our cosmic trip.</p>
-
-    <p>In through nature, out through nature. What we do in between is our calling. Because eventually, we’ll see there was no separation—only a collective chance for interdependence.</p>
-
-    <p>We are fungal advocates. We see the unseen and know the unknown.</p>
-
-    <p>We are human nature potentiators. The path forward to human and planetary health is ours to hold, nourish and remember.</p>
+    <p>Rainbo was born in 2018 after many transformative experiences with fungi.</p>
+    <p><strong>Tonya Papanikolov</strong></p>
   </div>
 </section>
 
-<!-- GUIDED BY -->
+<!-- GUIDED -->
 <section class="guided">
   <h2>We are guided by</h2>
   <div class="circles">
@@ -288,14 +76,15 @@ body {
   </div>
 </section>
 
-<!-- REMEMBER SECTION -->
+<!-- REMEMBER -->
 <section class="remember">
   <div class="remember-container">
     <div class="remember-text">
       <h2>Remember you are nature.</h2>
-      <p>We need fungi, and fungi need the planet. Mushrooms contain the intelligence to heal.</p>
+      <p>We need fungi, and fungi need the planet.</p>
       <button>THE RAINBO WAY</button>
     </div>
+
     <div class="remember-images">
       <img src="images/r1.jpg">
       <img src="images/r2.jpg">
@@ -312,5 +101,8 @@ body {
   <button>SUBSCRIBE</button>
 </section>
 
+<!-- JS -->
+<script src="js/learn.js"></script>
 </body>
 </html>
+

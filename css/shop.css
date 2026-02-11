@@ -25,53 +25,42 @@ body{
   z-index:100;
 }
 
+.left{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
 .logo{
   font-weight:700;
   font-size:22px;
   letter-spacing:1px;
 }
 
+/* NAV */
 nav{
   display:flex;
-  flex-wrap:wrap;
   gap:10px;
 }
 
-/* ===== NAV BUTTON STYLE ===== */
 nav a{
-  margin:0 6px;
   text-decoration:none;
   color:#111;
   font-size:15px;
   padding:8px 16px;
   border-radius:999px;
-  transition:all .3s ease;
-  background:transparent;   /* Default no color */
+  transition:.3s;
 }
 
-/* Hover effect */
 nav a:hover{
   background:#f0efe9;
 }
 
-/* ===== ACTIVE COLORS (Click panna varum) ===== */
+nav a.active:nth-child(2){background:#1f51f9;color:#fff;}
+nav a.active:nth-child(3){background:#efa317;color:#fff;}
+nav a.active:nth-child(4){background:#0b7545;color:#fff;}
 
-nav a.active:nth-child(1){
-  background:#1f51f9;   /* Shop - Blue */
-}
-
-nav a.active:nth-child(2){
-  background:#efa317;   /* Learn - Peach */
-}
-
-nav a.active:nth-child(3){
-  background:#0b7545;   /* Rainbo Model - Mint */
-}
-
-nav a.active:nth-child(4){
-  background:#550344;   /* Subscribe + Save - Pink */
-}
-
+/* RIGHT */
 .right{
   display:flex;
   align-items:center;
@@ -85,8 +74,38 @@ nav a.active:nth-child(4){
 }
 
 #cartCount{
-  font-size:14px;
   font-weight:600;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger{
+  display:none;
+  background:none;
+  border:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu{
+  display:none;
+  position:fixed;
+  top:70px;
+  left:0;
+  width:100%;
+  background:#fff;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  z-index:999;
+}
+
+.mobile-menu a{
+  display:block;
+  padding:14px;
+  text-decoration:none;
+  color:#111;
+  font-size:16px;
+  border-bottom:1px solid #eee;
 }
 
 /* ================= BANNER ================= */
@@ -103,7 +122,6 @@ nav a.active:nth-child(4){
 
 .shop-title h1{
   font-size:48px;
-  margin-bottom:6px;
 }
 
 .shop-title p{
@@ -150,22 +168,18 @@ nav a.active:nth-child(4){
 .subtitle{
   color:#555;
   font-size:14px;
-  margin-top:4px;
 }
 
 .rating{
   color:#c9a227;
   margin:6px 0;
-  font-size:14px;
 }
 
 .price{
   font-weight:600;
-  font-size:16px;
 }
 
 .product-card button{
-  width:100%;
   margin-top:auto;
   padding:14px;
   border:none;
@@ -174,7 +188,6 @@ nav a.active:nth-child(4){
   color:#fff;
   font-weight:600;
   cursor:pointer;
-  font-size:14px;
 }
 
 /* ================= FOOTER ================= */
@@ -182,59 +195,42 @@ footer{
   padding:30px;
   text-align:center;
   color:#777;
-  font-size:14px;
 }
 
 /* ================= TABLET ================= */
-@media (max-width:1024px){
-
+@media(max-width:1024px){
+  .shop-grid{
+    grid-template-columns:repeat(2,1fr);
+    padding:30px;
+  }
   .shop-title{
     padding:40px 30px 20px;
-  }
-
-  .shop-title h1{
-    font-size:40px;
-  }
-
-  .shop-grid{
-    padding:30px;
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
-  }
-
-  .product-card img{
-    height:260px;
   }
 }
 
 /* ================= MOBILE ================= */
-@media (max-width:768px){
+@media(max-width:768px){
+
+  /* header */
+  nav{display:none;}
+  .hamburger{display:block;}
 
   .topbar{
-    flex-direction:column;
-    align-items:flex-start;
     padding:12px 20px;
-    gap:10px;
-  }
-
-  nav{
-    gap:8px;
-  }
-
-  nav a{
-    font-size:14px;
-    padding:6px 14px;
   }
 
   .right{
     width:100%;
     justify-content:space-between;
+    margin-top:10px;
   }
 
+  /* banner */
   .shop-banner img{
     height:220px;
   }
 
+  /* title */
   .shop-title{
     padding:30px 20px 10px;
   }
@@ -243,57 +239,20 @@ footer{
     font-size:32px;
   }
 
-  .shop-title p{
-    font-size:14px;
-  }
-
+  /* grid */
   .shop-grid{
     padding:20px;
     grid-template-columns:1fr;
-    gap:20px;
   }
 
   .product-card img{
     height:240px;
   }
-
-  .product-card h3{
-    font-size:17px;
-  }
-
-  .subtitle,
-  .rating,
-  .price{
-    font-size:14px;
-  }
-
-  .product-card button{
-    padding:12px;
-    font-size:14px;
-  }
 }
 
 /* ================= SMALL MOBILE ================= */
-@media (max-width:420px){
-
-  .logo{
-    font-size:20px;
-  }
-
-  nav a{
-    font-size:13px;
-  }
-
-  .right a,
-  #cartCount{
-    font-size:13px;
-  }
-
-  .shop-title h1{
-    font-size:28px;
-  }
-
-  .product-card img{
-    height:200px;
-  }
+@media(max-width:420px){
+  .logo{font-size:20px;}
+  .shop-title h1{font-size:28px;}
+  .product-card img{height:200px;}
 }
