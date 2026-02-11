@@ -1,314 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Rainbo | Our Story</title>
+<meta charset="UTF-8" />
+<title>Rainbo | Our Story</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #f8f6ef;
-      color: #2c2c2c;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #f8f6ef;
+  color: #2c2c2c;
+}
 
-    /* TOP BAR */
-    .topbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(248,246,239,0.95);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 40px;
-      z-index: 1000;
-      box-sizing: border-box;
-    }
+/* TOPBAR */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(248,246,239,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
 
-    .nav-left,
-    .nav-right {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      font-size: 14px;
-    }
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  font-size: 14px;
+}
 
-    .topbar a {
-      text-decoration: none;
-      color: #2c2c2c;
-    }
+.topbar a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
 
-    .topbar a:hover {
-      text-decoration: underline;
-    }
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-    .logo {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  margin-top: 70px;
+}
 
-    /* HERO */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 85vh;
-      overflow: hidden;
-      margin-top: 70px;
-    }
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.hero-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  color: white;
+  font-size: 36px;
+}
 
-    .hero-title {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start; /* Left-align the text */
-      padding-left: 40px;          /* Space from the left edge */
-      color: white;
-      font-size: 36px;
-      letter-spacing: 0.5px;
-    }
+/* INTRO */
+.intro {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
 
-    /* INTRO */
-    .intro {
-      max-width: 900px;
-      margin: 120px auto;
-      padding: 0 40px;
-    }
+.intro h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: normal;
+}
 
-    .intro p:first-child {
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
+/* FOUNDER */
+.founder {
+  max-width: 1100px;
+  margin: 0 auto 140px;
+  padding: 0 40px;
+}
 
-    .intro h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin-bottom: 30px;
-      font-weight: normal;
-    }
+.founder-images {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
 
-    .intro p:last-child {
-      font-size: 22px;
-      line-height: 1.5;
-    }
+.founder-images img {
+  width: 50%;
+  border-radius: 14px;
+}
 
-    /* FOUNDER */
-    .founder {
-      max-width: 1100px;
-      margin: 0 auto 140px;
-      padding: 0 40px;
-    }
+.founder-text {
+  line-height: 1.8;
+  font-size: 17px;
+}
 
-    .founder-note {
-      margin-bottom: 40px;
-      font-size: 16px;
-    }
+/* ================= GUIDED SECTION ================= */
 
-    .founder-images {
-      display: flex;
-      gap: 40px;
-      margin-bottom: 50px;
-    }
+.guided {
+  padding: 120px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .founder-images img {
-      width: 50%;
-      border-radius: 14px;
-      object-fit: cover;
-    }
+.guided h2 {
+  font-size: 28px;
+  margin-bottom: 60px;
+}
 
-    .founder-text {
-      line-height: 1.8;
-      font-size: 17px;
-      max-width: 900px;
-    }
+.circles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
 
-    /* VALUES SECTION */
-    .values {
-      max-width: 1000px;
-      margin: 100px auto;
-      padding: 0 40px;
-      text-align: left; /* changed from center to left */
-    }
+.circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+}
 
-    .values img {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      display: block;
-    }
+.quality { width: 260px; height: 260px; background:#8ea2d8; }
+.knowledge { width: 160px; height:160px; background:#a65a00; color:white;}
+.health { width:120px; height:120px; background:#5f6f4f; color:white;}
+.intention { width:180px; height:180px; background:#e04bb4; color:white;}
+.community { width:120px; height:120px; background:#8c7a00; color:white;}
+.integrity { width:200px; height:200px; background:#ff3b00; color:white;}
 
-    .values p {
-      margin-top: 30px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+/* ================= REMEMBER SECTION ================= */
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .nav-left,
-      .nav-right {
-        gap: 16px;
-        font-size: 13px;
-      }
+.remember {
+  background:#9a8417;
+  padding:100px 40px;
+  color:white;
+}
 
-      .logo {
-        display: none;
-      }
+.remember-container {
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  gap:60px;
+}
 
-      .hero {
-        height: 60vh;
-      }
+.remember-text {
+  flex:1;
+}
 
-      .hero-title {
-        font-size: 28px;
-      }
+.remember-text h2 {
+  font-size:32px;
+}
 
-      .intro h1 {
-        font-size: 36px;
-      }
+.remember-text button {
+  margin-top:20px;
+  padding:12px 24px;
+  border:none;
+  background:black;
+  color:white;
+  cursor:pointer;
+}
 
-      .founder-images {
-        flex-direction: column;
-      }
+.remember-images {
+  flex:1;
+  display:flex;
+  gap:20px;
+}
 
-      .founder-images img {
-        width: 100%;
-      }
-    }
-  </style>
+.remember-images img {
+  width:33%;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+/* ================= SUBSCRIBE ================= */
+
+.subscribe {
+  padding:80px 40px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.subscribe input {
+  padding:12px;
+  width:250px;
+}
+
+.subscribe button {
+  padding:12px 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .founder-images { flex-direction:column; }
+  .founder-images img { width:100%; }
+  .remember-container { flex-direction:column; }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <nav class="nav-left">
-      <a href="shop.html">Shop</a>
-      <a href="learn.html">Learn</a>
-      <a href="#">Rainbo World</a>
-    </nav>
+<header class="topbar">
+  <nav class="nav-left">
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="Rainbo.html">Rainbo World</a>
+  </nav>
+  <div class="logo"></div>
+  <nav class="nav-right">
+    <a href="#">Take the Quiz</a>
+    <a href="#">Reviews</a>
+    <a href="#">Cart (0)</a>
+  </nav>
+</header>
 
-    <div class="logo"></div>
+<section class="hero">
+  <img src="images/learn-hero-bg.jpg">
+  <div class="hero-title">Our Story</div>
+</section>
 
-    <nav class="nav-right">
-      <a href="#">Take the Quiz</a>
-      <a href="#">Reviews</a>
-      <a href="#">🔍</a>
-      <a href="#">Login</a>
-      <a href="#">Cart (0)</a>
-    </nav>
-  </header>
+<section class="intro">
+  <h1>Welcome</h1>
+  <p>Rainbo is your space for optimizing your mind, body and spirit with fungi.</p>
+  <p>We offer potent and high quality adaptogenic mushrooms to bring radical health and harmony to people and the planet.</p>
+  <p><strong>A Note from our Founder,<br>Tonya Papanikolov</strong></p>
+</section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="images/learn-hero-bg.jpg" alt="Our Story Banner">
-    <div class="hero-title">Our Story</div>
-  </section>
+<section class="founder">
+  <div class="founder-images">
+    <img src="images/learn-founder.jpg">
+    <img src="images/learn-mushroom.jpg">
+  </div>
+  <div class="founder-text">
+    <p>Rainbo was born in 2018 in my Toronto apartment after many transformative experiences with fungi, but the spores of awareness were planted much earlier. My journey with fungi first began in 2011 brewing mushroom tea and reconnecting to nature in the Canadian forests. It was in this season that I knew mushrooms would be with me for the rest of my life.</p>
 
-  <!-- INTRO -->
-  <section class="intro">
-    <p>Welcome</p>
+    <p>For many years I struggled with digestive issues and immune dysregulation. Mentally, I was anxious and in a constant cycle of stress and brain fog—in retrospect I was existing in a general state of disconnection. After failed attempts at feeling better via traditional western medicine, my world shifted as I adopted mind-body practices, changed my diet and began taking mushrooms functionally.</p>
 
-    <h1>
-      Rainbo is your space for <em>optimizing</em> your mind,
-      body and spirit with fungi.
-    </h1>
+    <p>I created Rainbo to spread mushrooms to the masses and get people healthier and more deeply connected to nature. Mushrooms have shown me that whole-person healing is possible—that balance between all parts of ourselves and our social and natural environments is within grasp.</p>
 
-    <p>
-      We offer potent and high quality <em>adaptogenic</em> mushrooms
-      to bring radical health and harmony to people and the planet.
-    </p>
-  </section>
+    <p>The great metaphor of what mushrooms represent in nature is both my—and Rainbo’s—raison d’être: resilience, cooperation, and the unfathomable magnitude of nature’s intelligence and interconnectedness.</p>
 
-  <!-- FOUNDER -->
-  <section class="founder">
-    <div class="founder-note">
-      <em>A note from our Founder,</em><br>
-      <strong>Tonya Papanikolov</strong>
+    <p>I’m so happy our journeys have converged at this moment in time because now is the time. Thank you for being here and welcome to our Rainbo world.</p>
+
+    <p><strong>Tonya Papanikolov</strong><br>
+    Holistic Nutritionist<br>
+    Kundalini Yoga Practitioner<br>
+    M.S Mind-Body Medicine Student</p>
+
+    <p><strong>Our Manifesto</strong></p>
+
+    <p>Because eventually, we’ll all go back to fungi. This is our cosmic trip.</p>
+
+    <p>In through nature, out through nature. What we do in between is our calling. Because eventually, we’ll see there was no separation—only a collective chance for interdependence.</p>
+
+    <p>We are fungal advocates. We see the unseen and know the unknown.</p>
+
+    <p>We are human nature potentiators. The path forward to human and planetary health is ours to hold, nourish and remember.</p>
+  </div>
+</section>
+
+<!-- GUIDED BY -->
+<section class="guided">
+  <h2>We are guided by</h2>
+  <div class="circles">
+    <div class="circle quality">Quality</div>
+    <div class="circle knowledge">Knowledge</div>
+    <div class="circle health">Health</div>
+    <div class="circle intention">Intention</div>
+    <div class="circle community">Community</div>
+    <div class="circle integrity">Integrity</div>
+  </div>
+</section>
+
+<!-- REMEMBER SECTION -->
+<section class="remember">
+  <div class="remember-container">
+    <div class="remember-text">
+      <h2>Remember you are nature.</h2>
+      <p>We need fungi, and fungi need the planet. Mushrooms contain the intelligence to heal.</p>
+      <button>THE RAINBO WAY</button>
     </div>
-
-    <div class="founder-images">
-      <img src="images/learn-founder.jpg" alt="Founder">
-      <img src="images/learn-mushroom.jpg" alt="Mushroom">
+    <div class="remember-images">
+      <img src="images/r1.jpg">
+      <img src="images/r2.jpg">
+      <img src="images/r3.jpg">
     </div>
+  </div>
+</section>
 
-    <div class="founder-text">
-      Rainbo was born in 2018 in my Toronto apartment after many transformative
-      experiences with fungi, but the spores of awareness were planted much earlier.
-      My journey with fungi first began in 2011 brewing mushroom tea and reconnecting
-      to nature in the Canadian forests. It was in this season that I knew mushrooms
-      would be with me for the rest of my life. They became and still are instrumental
-      in my healing journey, and I know they can be for yours, too.
-      <br><br>
-      For many years I struggled with digestive issues and immune dysregulation.
-      Mentally, I was anxious and in a constant cycle of stress and brain fog—in
-      retrospect I was existing in a general state of disconnection. After failed
-      attempts at feeling better via traditional western medicine, my world shifted
-      as I adopted mind-body practices, changed my diet and began taking mushrooms
-      functionally.
-      <br><br>
-      I created Rainbo to spread mushrooms to the masses and get people healthier and
-      more deeply connected to nature. Mushrooms have shown me that whole-person
-      healing is possible—that balance between all parts of ourselves and our social
-      and natural environments is within grasp.
-      <br><br>
-      The great metaphor of what mushrooms represent in nature is both my—and
-      Rainbo’s—raison d’être: resilience, cooperation, and the unfathomable magnitude
-      of nature’s intelligence and interconnectedness. These fungal organisms contain
-      some of the secrets to life as they network and weave wisdom into the collective
-      consciousness.
-      <br><br>
-      I’m so happy our journeys have converged at this moment in time because now is
-      the time. Thank you for being here and welcome to our Rainbo world.
-      <br><br>
-      <strong>Tonya Papanikolov</strong><br>
-      Holistic Nutritionist<br>
-      Kundalini Yoga Practitioner<br>
-      M.S Mind-Body Medicine Student
-    </div>
-  </section>
-
-  <!-- MANIFESTO -->
-  <section class="intro">
-    <h1>Our Manifesto</h1>
-
-    <p>
-      Because eventually, we’ll all go back to fungi.<br>
-      This is our cosmic trip.
-      <br><br>
-      In through nature, out through nature. What we do in between is our calling.
-      Because eventually, we’ll see there was no separation—only a collective chance
-      for interdependence.
-      <br><br>
-      We are fungal advocates. We see the unseen and know the unknown.
-      <br><br>
-      We are human nature potentiators. The path forward to human and planetary
-      health is ours to hold, nourish and remember.
-      <br><br>
-      We are guided by
-    </p>
-  </section>
-
-  <!-- VALUES IMAGE SECTION -->
-  <section class="values">
-    <img src="images/learn-values.png" alt="Rainbo Guiding Principles">
-    <p>
-      The quality of our mushrooms, our people, our supply chain and beyond is directly
-      connected to our quest for integrity. We opt for the highest quality, most
-      sustainable everything because it’s how we ensure a positive impact on people
-      and the planet.
-    </p>
-  </section>
+<!-- SUBSCRIBE -->
+<section class="subscribe">
+  <h3>Curious Shroomers</h3>
+  <p>Receive 15% off your first order.</p>
+  <input type="email" placeholder="Email">
+  <button>SUBSCRIBE</button>
+</section>
 
 </body>
 </html>

@@ -1,269 +1,299 @@
+/* ================= GLOBAL ================= */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: #f6f5f2;
-    color: #1f1f1f;
+  background: #f6f5f2;
+  color: #1f1f1f;
+  line-height: 1.6;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 50px;
-    background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.topbar nav a,
-.topbar .right a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #000;
-    font-weight: 500;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-/* HERO */
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* ================= NAVIGATION ================= */
+
+.main-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  color: #000;
+  background: transparent;   /* 🔥 Default no color */
+}
+
+/* Hover effect */
+.main-nav a:hover {
+  background: #f0efe9;
+}
+
+/* 🎨 ACTIVE COLORS (Click panna varum) */
+
+.main-nav a.active:nth-child(1) {
+  background: #6080eb;   /* Shop - Soft Blue */
+}
+
+.main-nav a.active:nth-child(2) {
+  background: #efae35;   /* Learn - Peach */
+}
+
+.main-nav a.active:nth-child(3) {
+  background: #72f8bb;   /* Rainbo World - Mint */
+}
+
+.main-nav a.active:nth-child(4) {
+  background: #f977dd;   /* Subscribe - Pink */
+}
+
+/* ================= HEADER RIGHT ================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.cart {
+  font-weight: 600;
+}
+
+/* ================= HERO ================= */
+
 .hero {
-    height: 75vh;
-    background: linear-gradient(
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.35)
-    ),
+  min-height: 85vh;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url("../images/hero.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding-left: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
 }
 
 .hero-text {
-    max-width: 500px;
+  max-width: 600px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    color: #fff;
-    margin-bottom: 16px;
+  font-size: clamp(36px, 5vw, 60px);
+  color: #fff;
+  line-height: 1.1;
 }
 
 .hero p {
-    color: #fff;
-    font-size: 16px;
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
 }
 
-.hero button {
-    margin-top: 22px;
-    padding: 14px 28px;
-    border-radius: 30px;
-    border: none;
-    background: #fff;
-    font-weight: 600;
-    cursor: pointer;
+.primary-btn {
+  margin-top: 28px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  transition: 0.3s ease;
 }
 
-/* SHOP */
+.primary-btn:hover {
+  background: #e5e5e5;
+}
+
+/* ================= SHOP SECTION ================= */
+
 .shop {
-    padding: 80px;
-    background: #faf9f6;
+  padding: 100px 80px;
 }
 
-.tabs {
-    margin: 20px 0 40px;
+.shop h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.tabs button {
-    padding: 8px 18px;
-    border-radius: 20px;
-    border: none;
-    margin-right: 10px;
-    background: #e8e7e3;
-    cursor: pointer;
-}
-
-.tabs .active {
-    background: #5c7c59;
-    color: #fff;
-}
-
-/* ============================= */
-/* 🔥 UPDATED PRODUCT SCROLL 🔥 */
-/* ============================= */
-
-.products-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
+/* ================= PRODUCTS ================= */
 
 .products {
-    display: flex;
-    gap: 32px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 50px;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
 }
 
-/* Hide scrollbar */
 .products::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-/* PRODUCT CARD */
 .product-card {
-    background: #fff;
-    padding: 32px 26px;
-    width: 300px;
-    min-width: 300px;
-    border-radius: 26px;
-    text-align: center;
-    flex-shrink: 0;
+  background: #ffffff;
+  min-width: 280px;
+  padding: 30px;
+  border-radius: 28px;
+  text-align: center;
+  transition: 0.3s ease;
 }
 
-/* IMAGE */
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
 .product-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    margin-bottom: 18px;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
 }
 
-/* TEXT */
-.product-card h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.product-card p {
-    font-size: 14px;
-    margin: 12px 0 18px;
-    line-height: 1.5;
-    color: #444;
-}
-
-/* GREEN SHOP NOW */
 .product-card button {
-    padding: 12px 26px;
-    border-radius: 999px;
-    border: none;
-    background: #5c7c59;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.25s ease;
+  margin-top: 16px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  background: #5c7c59;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.product-card button:hover {
-    background: #4e6b4b;
-    transform: translateY(-2px);
-}
+/* ================= PROCESS ================= */
 
-/* SCROLL ARROWS */
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: none;
-    background: #fff;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 10;
-}
-
-.scroll-btn.left {
-    left: 10px;
-}
-
-.scroll-btn.right {
-    right: 10px;
-}
-
-/* STATEMENT */
-.statement {
-    padding: 90px 120px;
-}
-
-.statement .small {
-    font-size: 14px;
-    opacity: 0.7;
-}
-
-.statement h2 {
-    font-size: 32px;
-    margin: 20px 0;
-}
-
-.statement span {
-    font-weight: 700;
-}
-
-/* BOTTLE IMAGE */
-.bottle-section img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-}
-
-/* PROCESS */
 .process {
-    display: flex;
-    gap: 60px;
-    padding: 80px;
-    background: #faf9f6;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 100px 80px;
+  background: #faf9f6;
 }
 
-/* PROMISE ICONS */
+/* ================= PROMISES ================= */
+
 .promises {
-    padding: 80px 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 40px;
-    text-align: center;
-    background: #f6f5f2;
+  padding: 100px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  text-align: center;
 }
 
-.promise-card span {
-    font-size: 34px;
-    display: block;
-    margin-bottom: 12px;
+.promise-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 24px;
+  font-weight: 600;
 }
 
-.promise-card p {
-    font-size: 14px;
-    font-weight: 600;
-}
+/* ================= FOOTER ================= */
 
-/* FOOTER */
 footer {
-    text-align: center;
-    padding: 24px;
-    background: #eee;
+  text-align: center;
+  padding: 30px;
+  background: #eeeeee;
+  font-size: 14px;
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .products {
-        padding: 0;
-    }
+/* ================= TABLET VIEW ================= */
 
-    .scroll-btn {
-        display: none;
-    }
+@media (max-width: 1024px) {
 
-    .process {
-        flex-direction: column;
-    }
+  .topbar {
+    padding: 16px 40px;
+  }
 
-    .hero {
-        padding-left: 40px;
-    }
+  .hero {
+    padding: 0 40px;
+  }
+
+  .shop,
+  .process,
+  .promises {
+    padding: 80px 40px;
+  }
+
+  .process {
+    flex-direction: column;
+  }
+}
+
+/* ================= MOBILE VIEW ================= */
+
+@media (max-width: 768px) {
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero {
+    padding: 40px 24px;
+    min-height: 65vh;
+  }
+
+  .shop,
+  .process,
+  .promises {
+    padding: 60px 24px;
+  }
+
+  button {
+    min-height: 44px;
+  }
 }

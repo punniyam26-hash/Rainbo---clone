@@ -1,0 +1,341 @@
+/* ================= GLOBAL ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f4f1ea;
+color:#111;
+line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#fff;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar .right,
+.navbar .left{
+display:flex;
+align-items:center;
+}
+
+.navbar a{
+text-decoration:none;
+color:#111;
+margin-right:25px;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#6b8e23;
+}
+
+/* ================= HERO ================= */
+
+.sub1{
+padding:120px 80px;
+max-width:1200px;
+margin:auto;
+}
+
+.sub1 h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.sub1 p{
+font-size:18px;
+color:#555;
+}
+
+/* ================= PERKS ================= */
+
+.sec2{
+padding:80px 60px;
+max-width:1300px;
+margin:auto;
+}
+
+.perk h3{
+font-size:28px;
+margin-bottom:30px;
+}
+
+.cards-1{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:60px;
+}
+
+.card-m{
+background:#fff;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* ================= SUBSCRIPTION CARDS ================= */
+
+.paraghrap{
+margin-bottom:40px;
+}
+
+.card-wrapper{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.fake-btn{
+display:inline-block;
+background:#111;
+color:#fff;
+padding:6px 15px;
+border-radius:20px;
+font-size:13px;
+margin-bottom:10px;
+}
+
+/* ================= SHOP SECTION ================= */
+
+.shop-container{
+margin-top:60px;
+}
+
+.rows,
+.rows-1{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+margin-bottom:40px;
+}
+
+.btn{
+background:#111;
+color:#fff;
+border:none;
+padding:10px 25px;
+border-radius:30px;
+cursor:pointer;
+margin-top:10px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#6b8e23;
+}
+
+/* ================= SMALL ICON GRID ================= */
+
+.sm-container{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+padding:60px;
+background:#fff;
+margin-top:60px;
+}
+
+.sm-card{
+text-align:center;
+}
+
+.sm-card img{
+width:50px;
+margin-bottom:10px;
+}
+
+/* ================= REVIEWS ================= */
+
+.revi{
+padding:100px 60px;
+}
+
+.p-view,
+.p-view2{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+margin-top:40px;
+}
+
+.c-view{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* ================= SIMPLIFY ================= */
+
+.simplyfy{
+padding:100px 60px;
+text-align:center;
+}
+
+.s-simple{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+margin-top:40px;
+}
+
+.sim-img img{
+width:100%;
+border-radius:20px;
+}
+
+/* ================= FAQ ================= */
+
+.question{
+padding:100px 60px;
+}
+
+.que{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+margin-top:60px;
+}
+
+.que-images img{
+width:100%;
+border-radius:20px;
+}
+
+.que-row{
+margin-top:60px;
+}
+
+.qqq{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#fff;
+margin-bottom:15px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:1024px){
+
+.cards-1{
+grid-template-columns:repeat(2,1fr);
+}
+
+.card-wrapper{
+grid-template-columns:repeat(2,1fr);
+}
+
+.sm-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+padding:20px;
+}
+
+.navbar .right,
+.navbar .left{
+flex-wrap:wrap;
+justify-content:center;
+margin-bottom:10px;
+}
+
+.sub1{
+padding:80px 20px;
+text-align:center;
+}
+
+.sub1 h1{
+font-size:36px;
+}
+
+.sec2,
+.revi,
+.simplyfy,
+.question{
+padding:60px 20px;
+}
+
+.cards-1,
+.card-wrapper,
+.rows,
+.rows-1,
+.p-view,
+.p-view2,
+.s-simple,
+.que{
+grid-template-columns:1fr;
+}
+
+.sm-container{
+grid-template-columns:repeat(2,1fr);
+padding:40px 20px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+.sm-container{
+grid-template-columns:1fr;
+}
+
+.sub1 h1{
+font-size:28px;
+}
+
+}
