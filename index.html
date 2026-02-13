@@ -6,33 +6,40 @@
   <title>Rainbo Clone</title>
 
   <link rel="stylesheet" href="css/style.css" />
+ 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 <!-- ================= HEADER ================= -->
-<header class="topbar">
-  <div class="header-left">
-
-    <div class="logo">RAINBO</div>
-
-    <!-- ☰ MOBILE MENU ICON -->
-    <div class="menu-toggle" id="menuToggle">☰</div>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="shop.html">Shop</a>
-      <a href="learn.html">Learn</a>
-      <a href="Rainbo.html">Rainbo World</a>
-      <a href="#">Subscribe + Save</a>
-    </nav>
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="./index.html" class="active">Home</a>
+    <a href="./shop.html">Shop</a>
+    <a href="./learn.html">Learn</a>
+    <a href="./Rainbo.html">Rainbo World</a>
+    <a href="./Subscribe.html">Subscribe + Save</a>
   </div>
 
-  <div class="header-right">
+  <div class="nav-logo">
+    <a href="./index.html"> <img src="./images/logo.svg" alt="Logo"></a>
+   
+  </div>
+
+  <div class="nav-right">
+    <a href="./shop.html">Shop</a>
     <a href="#">Take the Quiz</a>
+    <a href="#">Reviews</a>
+    <i class="fas fa-search"></i>
     <a href="#">Login</a>
-    <span class="cart">Cart (0)</span>
+    <a href="#">Cart (0)</a>
+    
   </div>
-</header>
+   <div class="hamburger" id="hamburger">
+    ☰
+  </div>  
+</nav>
 
 <!-- ================= HERO / BANNER ================= -->
 <section class="hero">
@@ -49,7 +56,80 @@
 </section>
 
 <!-- ================= SHOP ================= -->
+ 
 <section class="shop">
+  <div class="tab-main">
+    <div class="tabs">
+    <h4>Shop by benefit</h4>
+    <button class="tab active" data-type="all">Brain</button>
+    <button class="tab" data-type="energy">Energy</button>
+    <button class="tab" data-type="stress">Stress</button>
+     <button class="tab" data-type="sleep">Mood</button>
+      <button class="tab" data-type="sleep">Sex</button>
+       <button class="tab" data-type="sleep">Immunity</button>
+    <button class="tab" data-type="sleep">Sleep</button>
+     <!-- <button class="tab" data-type="sleep">Longevity</button> -->
+     <button class="all">Shop all</button>
+  </div>
+
+  <div class="products">
+    <div class="product-card" data-type="energy">
+      <img src="images/product1.png" alt="">
+      <h3>Fungki Mushroom Coffee</h3>
+      <p>Nootropic • Low Acid </p>
+      <!-- <p>More Benifits</p> -->
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="stress">
+      <img src="images/product2.png" alt="">
+      <h3>Herbal Mushroom Coffee</h3>
+      <p>Caffeine Free </p>
+      <!-- <p>More Benifits</p> -->
+      <p>Start $50</p>
+      <button class="shop-btn" >SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="sleep">
+      <img src="images/product3.png" alt="">
+      <h3>Calm Blend</h3>
+      <p>Sleep • Relax • Restore</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="energy">
+      <img src="images/product4.png" alt="">
+      <h3>Daily Energy</h3>
+      <p>Focus • Stamina</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="energy">
+      <img src="images/stack1.jpg" alt="">
+      <h3>Daily Energy</h3>
+      <p>Focus • Stamina</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="energy">
+      <img src="images/stack2.jpg" alt="">
+      <h3>Daily Energy</h3>
+      <p>Focus • Stamina</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- <section class="shop">
   <h2>Shop by benefit</h2>
 
   <div class="tabs">
@@ -64,6 +144,7 @@
       <img src="images/product1.png" alt="">
       <h3>Fungki Mushroom Coffee</h3>
       <p>Nootropic • Low Acid • 47mg Caffeine</p>
+      <p>from $50</p>
       <button class="shop-btn">SHOP NOW</button>
     </div>
 
@@ -71,6 +152,8 @@
       <img src="images/product2.png" alt="">
       <h3>Herbal Mushroom Coffee</h3>
       <p>Caffeine Free • Adaptogens</p>
+      <p>Noortroics</p>
+      <p>from $50</p>
       <button class="shop-btn">SHOP NOW</button>
     </div>
 
@@ -78,6 +161,9 @@
       <img src="images/product3.png" alt="">
       <h3>Calm Blend</h3>
       <p>Sleep • Relax • Restore</p>
+       <p>Caffeine Free • Adaptogens</p>
+       <p> 47mg Caffein</p>
+         <p>from $50</p>
       <button class="shop-btn">SHOP NOW</button>
     </div>
 
@@ -85,6 +171,9 @@
       <img src="images/product4.png" alt="">
       <h3>Daily Energy</h3>
       <p>Focus • Stamina</p>
+       <p>Caffeine Free • Adaptogens</p>
+      <p>Noortroics</p>
+      <p>from $50</p>
       <button class="shop-btn">SHOP NOW</button>
     </div>
 
@@ -92,6 +181,9 @@
       <img src="images/stack1.jpg" alt="">
       <h3>Daily Energy</h3>
       <p>Focus • Stamina</p>
+       <p>Caffeine Free • Adaptogens</p>
+      <p>Noortroics</p>
+      <p>from $50</p>
       <button class="shop-btn">SHOP NOW</button>
     </div>
 
@@ -99,23 +191,27 @@
       <img src="images/stack2.jpg" alt="">
       <h3>Daily Energy</h3>
       <p>Focus • Stamina</p>
+       <p>Caffeine Free • Adaptogens</p>
+      <p>Noortroics</p>
+      <p>from $50</p>
       <button class="shop-btn">SHOP NOW</button>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- ================= STATEMENT ================= -->
 <section class="statement">
   <p class="small">Heal your body, elevate humanity.</p>
 
   <h2>
-    Our potent and high quality adaptogenic functional mushrooms bring
+    Our potent and high quality adaptogenic functional 
+    <br/>mushrooms bring
     <span>radical health and harmony</span>
-    to people and the planet.
+    to people <br/>and the planet.
   </h2>
 
   <h3>
-    We’re woman-owned, Canadian-grown, guided by science and grounded in healing.
+    We’re woman-owned, Canadian-grown, guided by <br/>science and grounded in healing.
   </h3>
 </section>
 
@@ -126,28 +222,281 @@
 
 <!-- ================= PROCESS ================= -->
 <section class="process">
-  <div>
+  <div class="pro">
     <h3>Our Process</h3>
-    <p>Sourced at the fruiting body stage, dual extracted for purity.</p>
+    <p>Sourced at the fruiting body stage, our dual extract and non-psychoactive mushroom  products are brimming with benefits for body and mind.</p>
   </div>
 
-  <div>
+  <div class="pro">
     <h3>Our Promise</h3>
-    <p>No fillers. No grain. Just real mushrooms.</p>
+    <p>No grain. No fillers. No mycelium in our products. Just mushrooms with you and Mother Earth in mind.</p>
+  </div>
+  <div class="sm-container">
+    <div class="sm-card">
+        <img src="./images/vegan-icon.webp"/>
+        <p>vegan</p> 
+    </div>
+     <div class="sm-card">
+        <img src="./images/mon-icon.webp"/>
+        <p>non GMO</p> 
+    </div>
+     <div class="sm-card">
+        <img src="./images/B-icon.png"/>
+        <p>B-crop</p> 
+    </div>
+     <div class="sm-card">
+        <img src="./images/round.png"/>
+        <p>Climate</p> 
+    </div>
+     <div class="sm-card">
+        <img src="./images/half-icon.png"/>
+        <p>Fruiting body</p> 
+    </div>
+     <div class="sm-card">
+        <img src="./images/leaf.webp"/>
+        <p>Made in canada</p> 
+    </div>
+     <div class="sm-card">
+        <img src="./images/location.webp"/>
+        <p>100% tericable</p> 
+    </div>
+     <div class="sm-card">
+        <img src="./images/flask.png"/>
+        <p>Thired party</p> 
+    </div>
   </div>
 </section>
+<!-- =================Our mushroom ====== -->
+<section>
+  <div class="oru-mushroom">
+    <div class="mush">
+      <h1>Join Our Mushroom<br/>
+  Movement</h1>
+  
+    </div>
+<div class="video">
 
-<!-- ================= PROMISES ================= -->
-<section class="promises">
-  <div class="promise-card">🌱 Vegan</div>
-  <div class="promise-card">🧬 Non GMO</div>
-  <div class="promise-card">🏅 B-Corp</div>
-  <div class="promise-card">🌍 Climate Neutral</div>
+  <video autoplay muted loop>
+    <source src="./videos/video1.mp4" type="video/mp4">
+  </video>
+   <video autoplay muted loop>
+    <source src="./videos/video2.mp4" type="video/mp4">
+  </video>
+   <video autoplay muted loop>
+    <source src="./videos/video3.mp4" type="video/mp4">
+  </video>
+   <video autoplay muted loop>
+    <source src="./videos/video4.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+  </div>
+
 </section>
+<!-- ==============on mushroom===== -->
+ <section>
+<div class="on">
+  <h1 class="on-h1">On</h1>
+  <h1 class="on-h2">Mushroom</h1>
+</div>
+<div class="on-video">
+  <video autoplay muted loop>
+  <source src="./videos/video5.mp4" type="video/mp4">
+  </video>
+</div>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  <p>© 2026 Rainbo Clone – Static Website</p>
+ </section>
+ <!-- ======meditation===== -->
+  <section class="medi">
+    <div>
+      <h1>Meditations on Mushrooms</h1>
+      <p>By nature, mushrooms flourish via interconnected networks. Like us, their need for relation is what allows <br/> them to grow, improve, and share with the world their capacity to create positive impact everywhere.<br/> Fungi are for everyone and everything, and teach us that all beings thrive interdependently.</p>
+      <button class="medi-btn"> OUR MUSHOOM</button>
+    </div>
+
+  </section>
+  <!-- =======proud==== -->
+   <section>
+    <div class="proud warpper">
+      <div class="proud1 c1">
+        <h1>Rainbo is proudly<br/> certified</h1>
+        <p>We need fungi, and fungi need the planet. Mushrooms hold the intelligence to heal but they can only spread their wisdom with us if the ecosystem we share is a healthy one. World saving solutions are underfoot, and we’re bringing them to light for the benefit of all things.</p>
+        <button>TRY RAINBO WAY</button>
+      </div>
+      <div class="proud2 c2">
+        <img src="./images/B-round.webp"/>
+      </div>
+      <div class="proud3 c3">
+        <img src="./images/raibow-with-tree.webp"/>
+      </div>
+    </div>
+   </section>
+
+   <!-- ===============two peoduct============== -->
+    <section class="shop">
+      <h1 class="bun-h1">Two products, one bundle,<br/> infinite benefits.</h1>
+  <div class="tab-main">
+    <div class="tabs">
+    <p>Make feeling</p>
+   <button class="bun-btn">Shop bundel</button>
+  </div>
+
+  <div class="products">
+    <div class="product-card" data-type="energy">
+      <img src="./images/bundle1.webp" alt="">
+      <h3>Fungki Mushroom Coffee</h3>
+      <p>Nootropic • Low Acid </p>
+      <!-- <p>More Benifits</p> -->
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="stress">
+      <img src="./images/bundle2.webp" alt="">
+      <h3>Herbal Mushroom Coffee</h3>
+      <p>Caffeine Free • Adaptogens</p>
+      <!-- <p>More Benifits</p> -->
+      <p>Start $50</p>
+      <button class="shop-btn" >SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="sleep">
+      <img src="./images/bundle3.webp" alt="">
+      <h3>Calm Blend</h3>
+      <p>Sleep • Relax • Restore</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="energy">
+      <img src="./images/bundle2.webp" alt="">
+      <h3>Daily Energy</h3>
+      <p>Focus • Stamina</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="energy">
+      <img src="./images/bundle2.webp" alt="">
+      <h3>Daily Energy</h3>
+      <p>Focus • Stamina</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+
+    <div class="product-card" data-type="energy">
+      <img src="./images/bundle2.webp" alt="">
+      <h3>Daily Energy</h3>
+      <p>Focus • Stamina</p>
+      <p>More Benifits</p>
+      <p>Start $50</p>
+      <button class="shop-btn">SHOP NOW</button>
+    </div>
+  </div>
+  </div>
+  <!-- <marqee direction="right" scrolamount="10"> 
+    <span>Nylon</span>
+    <span>New York</span>
+    <span>Forbse</span>
+    <span>Bloom berg</span>
+    <span>Vanti fair</span>
+  </marqee> -->
+</section>
+<!-- ===============@Rainbo========== -->
+<section class="Rainb">
+  <a href="#" >@rainbomushrooms</a>
+  <div class="rain">
+    <img src="./images/hand-1bottel.webp"/>
+    <img src="./images/book-bottel.webp"/>
+    <img src="./images/hand-4 bottel.webp"/>
+    <img src="./images/three-mem.webp"/>
+  </div>
+
+</section>
+<!-- ============Footer========= -->
+ <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left Column -->
+    <div class="footer-col">
+      <h3>Curious Shroomers</h3>
+      <p>
+        Receive 15% off your first order and be the first to know
+        about new products, recipes, events and education.
+      </p>
+
+      <div class="subscribe-box">
+        <input type="email" placeholder="Email">
+        <button>SUBSCRIBE</button>
+      </div>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#">Sign in/Create</a></li>
+        <li><a href="#">Wholesale</a></li>
+        <li><a href="#">Gift card</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Ambassadors & Affiliates</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Podcast</a></li>
+      </ul>
+    </div>
+
+    <!-- Info -->
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Stockists</a></li>
+        <li><a href="#">Orders and Shipping</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="follow">
+        <h4>Follow</h4>
+        <div class="social-icons">
+          <span>IG</span>
+          <span>TT</span>
+          <span>FB</span>
+          <span>SP</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="footer-bottom">
+    <p>2026 © Rainbo™. All Rights Reserved.</p>
+    <div class="bottom-links">
+      <a href="#">Policies</a>
+      <a href="#">Terms and Conditions</a>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    *These statements have not been evaluated by the Food and Drug Administration.
+    This product is not intended to diagnose, treat, cure, or prevent disease.
+  </div>
 </footer>
 
 <!-- ================= TAB FILTER SCRIPT ================= -->
@@ -170,14 +519,27 @@
 </script>
 
 <!-- ================= MOBILE MENU SCRIPT ================= -->
-<script>
+<!-- <script>
   const menuToggle = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
+const headerLeftNav = document.getElementById("mainNav");
 
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("active");
+menuToggle.addEventListener("click", () => {
+  headerLeftNav.style.flexDirection = headerLeftNav.style.flexDirection=== "flex" 
+    ? "none" 
+    : "flex";
+});
+</script> -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
   });
 </script>
+
 
 </body>
 </html>

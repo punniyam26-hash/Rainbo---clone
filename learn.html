@@ -7,34 +7,64 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/learn.css">
+  
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
 </head>
 
 <body>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="shop.html">Shop</a>
-  <a href="learn.html">Learn</a>
-  <a href="Rainbo.html">Rainbo World</a>
-</div>
+ <!-- ====== HEADER ====== -->
+<nav class="navbar">
 
-<!-- TOP BAR -->
-<header class="topbar">
-  <nav class="nav-left">
-    <button class="hamburger" id="hamburger">☰</button>
-    <a href="shop.html">Shop</a>
-    <a href="learn.html" class="active">Learn</a>
-    <a href="Rainbo.html">Rainbo World</a>
-  </nav>
+  <!-- LEFT MENU (Desktop only) -->
+  <div class="nav-left">
+    <a href="./index.html">Home</a>
+    <a href="./shop.html">Shop</a>
+    <a href="./learn.html" class="active">Learn</a>
+    <a href="./Rainbo.html">Rainbo World</a>
+    <a href="./Subscribe.html">Subscribe + Save</a>
+  </div>
 
-  <div class="logo">RAINBO</div>
+  <!-- LOGO (Center Always) -->
+  <div class="nav-logo">
+    <a href="./index.html">
+      <img src="./images/logo.svg" alt="Logo">
+    </a>
+  </div>
 
-  <nav class="nav-right">
+  <!-- RIGHT MENU (Desktop only) -->
+  <div class="nav-right">
     <a href="#">Take the Quiz</a>
     <a href="#">Reviews</a>
+    <i class="fas fa-search"></i>
+    <a href="#">Login</a>
     <a href="#">Cart (0)</a>
-  </nav>
-</header>
+  </div>
+
+  <!-- MOBILE LEFT (Hamburger) -->
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- MOBILE RIGHT (Search) -->
+  <div class="mobile-search">
+    <i class="fas fa-search"></i>
+  </div>
+
+</nav>
+
+<!-- ====== MOBILE MENU ====== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="./shop.html">Shop</a>
+  <a href="./learn.html">Learn</a>
+  <a href="./Rainbo.html">Rainbo World</a>
+  <a href="./Subscribe.html">Subscribe + Save</a>
+</div>
+
+
 
 <!-- HERO -->
 <section class="hero">
@@ -52,15 +82,24 @@
 
 <!-- FOUNDER -->
 <section class="founder">
-  <div class="founder-images">
-    <img src="images/learn-founder.jpg">
-    <img src="images/learn-mushroom.jpg">
+  <div class="founder-para" >
+    <div class="founder-images">
+      <img src="images/learn-founder.jpg">
+      <img src="images/learn-mushroom.jpg">
+      
+    </div>
+    <p>Rainbo was born in 2018 in my Toronto apartment after many transformative experiences with fungi, but the spores of awareness were planted much earlier. My journey with fungi first began in 2011 brewing mushroom tea and reconnecting to nature in the Canadian forests. It was in this season that I knew mushrooms would be with me for the rest of my life. They became and still are instrumental in my healing journey, and I know they can be for yours, too.
+For many years I struggled with digestive issues and immune dysregulation. Mentally, I was anxious and in a constant cycle of stress and brain fog—in retrospect I was existing in a general state of disconnection. After failed attempts at feeling better via traditional western medicine, my world shifted as I adopted mind-body practices, changed my diet and began taking mushrooms functionally. 
+I created Rainbo to spread mushrooms to the masses and get people healthier and more deeply connected to nature. Mushrooms have shown me that whole-person healing is possible—that balance between all parts of ourselves and our social and natural environments is within grasp. ​​
+The great metaphor of what mushrooms represent in nature is both my—and Rainbo’s—raison d’être: 
+Tonya Papanikolov
+Holistic Nutritionist
+Kundalini Yoga Practitioner
+M.S Mind-Body Medicine Student</p>
+ <p><strong>Tonya Papanikolov</strong></p>
   </div>
 
-  <div class="founder-text">
-    <p>Rainbo was born in 2018 after many transformative experiences with fungi.</p>
-    <p><strong>Tonya Papanikolov</strong></p>
-  </div>
+  
 </section>
 
 <!-- GUIDED -->
@@ -81,28 +120,100 @@
   <div class="remember-container">
     <div class="remember-text">
       <h2>Remember you are nature.</h2>
-      <p>We need fungi, and fungi need the planet.</p>
+      <p>We need fungi, and fungi need the planet. Mushrooms hold the intelligence to heal but they can only spread their wisdom with us if the ecosystem we share is a healthy one. World saving solutions are underfoot, and we’re bringing them to light for the benefit of all beings. .</p>
       <button>THE RAINBO WAY</button>
     </div>
 
     <div class="remember-images">
-      <img src="images/r1.jpg">
-      <img src="images/r2.jpg">
-      <img src="images/r3.jpg">
+      <img src="./images/R1.webp">
+      <img src="images/R2.webp">
+      <img src="images/R3.webp">
     </div>
   </div>
 </section>
 
-<!-- SUBSCRIBE -->
-<section class="subscribe">
-  <h3>Curious Shroomers</h3>
-  <p>Receive 15% off your first order.</p>
-  <input type="email" placeholder="Email">
-  <button>SUBSCRIBE</button>
-</section>
+<!-- =================footer====== -->
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left Column -->
+    <div class="footer-col">
+      <h3>Curious Shroomers</h3>
+      <p>
+        Receive 15% off your first order and be the first to know
+        about new products, recipes, events and education.
+      </p>
+
+      <div class="subscribe-box">
+        <input type="email" placeholder="Email">
+        <button>SUBSCRIBE</button>
+      </div>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#">Sign in/Create</a></li>
+        <li><a href="#">Wholesale</a></li>
+        <li><a href="#">Gift card</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Ambassadors & Affiliates</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Podcast</a></li>
+      </ul>
+    </div>
+
+    <!-- Info -->
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Stockists</a></li>
+        <li><a href="#">Orders and Shipping</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+
+      <div class="follow">
+        <h4>Follow</h4>
+        <div class="social-icons">
+          <span>IG</span>
+          <span>TT</span>
+          <span>FB</span>
+          <span>SP</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="footer-bottom">
+    <p>2026 © Rainbo™. All Rights Reserved.</p>
+    <div class="bottom-links">
+      <a href="#">Policies</a>
+      <a href="#">Terms and Conditions</a>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    *These statements have not been evaluated by the Food and Drug Administration.
+    This product is not intended to diagnose, treat, cure, or prevent disease.
+  </div>
+</footer>
 
 <!-- JS -->
 <script src="js/learn.js"></script>
 </body>
 </html>
-

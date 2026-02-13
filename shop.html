@@ -1,201 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop | Rainbo Clone</title>
+  <meta charset="UTF-8">
+  <title>Shop | Rainbo Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/shop.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-.search-box{
-  position:fixed;top:80px;right:20px;background:#fff;
-  padding:14px;border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,.2);
-  display:none;z-index:999
-}
-.search-box input{padding:10px;width:220px}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-.modal{
-  position:fixed;inset:0;
-  background:rgba(0,0,0,.6);
-  display:none;align-items:center;justify-content:center;
-  z-index:999
-}
-.modal-content{
-  background:#fff;padding:26px;border-radius:16px;
-  max-width:440px;width:90%
-}
-.modal-content button{
-  margin-top:12px;padding:10px 16px;cursor:pointer
-}
-.option-btn{display:block;width:100%;margin-top:10px}
-</style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/shop.css">
 </head>
 <body>
 
-  <!-- Mobile Menu (only for mobile) -->
-  <div class="mobile-menu" id="mobileMenu">
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav class="desktop-nav">
+    <a href="#">Home</a>
+    <a href="#" class="active">Shop</a>
+    <a href="#">Learn</a>
+    <a href="#">Rainbo World</a>
+  </nav>
+
+  <div class="center-logo">
+    <img src="images/rainbo-logo.png" alt="Rainbo">
+  </div>
+  <div class="right">
+  <a href="#">Take the Quiz</a>
+  <a href="#">Login</a>
+
+  <!-- Review Icon Button -->
+  <button id="reviewIcon" class="review-icon-btn">
+    <i class="fas fa-star"></i>
+  </button>
+
+  <span id="cartCount">Cart (0)</span>
+</div>
+
+
+</header>
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <!-- Top Bar -->
+  <div class="mobile-menu-top">
+    <span class="close-menu" id="closeMenu">&times;</span>
+
+    <img src="images/rainbo-logo.png" class="mobile-logo" alt="Logo">
+
+    <i class="fas fa-search" id="mobileSearchIcon"></i>
+  </div>
+
+  <!-- Search Input -->
+  <div class="mobile-search-box" id="mobileSearchBox">
+    <input type="text" placeholder="Search products...">
+  </div>
+
+  <!-- Links -->
+  <div class="mobile-links">
+    <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
     <a href="learn.html">Learn</a>
     <a href="Rainbo.html">Rainbo World</a>
+    <a href="#">Take the Quiz</a>
+    <a href="#">Login</a>
   </div>
 
-  <header class="topbar">
-    <div class="left">
-      <div class="logo">RAINBO</div>
+  <!-- Cart -->
+  <div class="mobile-cart">
+    Cart (<span id="mobileCartCount">0</span>)
+  </div>
 
-      <button class="hamburger" id="hamburger">
-        <i class="fa fa-bars"></i>
-      </button>
+</div>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="shop.html" class="active">Shop</a>
-        <a href="learn.html">Learn</a>
-        <a href="Rainbo.html">Rainbo World</a>
-      </nav>
-    </div>
 
-    <div class="right">
-      <a href="#" id="quizBtn">Take the Quiz</a>
-      <a href="#" id="reviewsBtn">Reviews</a>
-      <a href="#" id="searchBtn"><i class="fa fa-search"></i></a>
-      <a href="#" id="loginBtn">Login</a>
-      <span id="cartCount">Cart (0)</span>
-    </div>
-  </header>
 
-  <!-- ✅ JS always here -->
-  <script src="js/shop.js"></script>
-</body>
-
+<!-- ================= BANNER ================= -->
 <section class="shop-banner">
   <img src="images/banner/shop-banner.jpg" alt="Shop Banner">
 </section>
 
-<section class="shop-title">
-  <h1>Shop</h1>
-  <p>Explore all our functional mushroom products</p>
-</section>
+<!-- ================= SHOP ================= -->
+<section class="shop-layout">
 
-<section class="shop-grid">
+  <!-- SIDEBAR -->
+  <aside class="shop-sidebar">
+    <h4>SHOP</h4>
+    <ul>
+      <li data-filter="all">Shop All</li>
+      <li data-filter="coffee">Coffee</li>
+      <li data-filter="gummies">Gummies</li>
+      <li data-filter="drops">Drops</li>
+    </ul>
 
-<!-- ===== 27 PRODUCT CARDS ===== -->
-<div class="product-card"><img src="images/shop/shop1.jpg"><h3>Fungki Mushroom Coffee</h3><p class="subtitle">Low-acid, 44mg caffeine</p><div class="rating">★★★★★ <span>(17)</span></div><p class="price">$48</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop2.jpg"><h3>Herbal Mushroom Coffee</h3><p class="subtitle">Caffeine-free adaptogens</p><div class="rating">★★★★★ <span>(21)</span></div><p class="price">$48</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop3.jpg"><h3>AM/PM Ritual Stack</h3><p class="subtitle">Day & night balance</p><div class="rating">★★★★★ <span>(12)</span></div><p class="price">$158</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop4.jpg"><h3>Lion’s Mane</h3><p class="subtitle">Focus & memory</p><div class="rating">★★★★★ <span>(9)</span></div><p class="price">$45</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop5.jpg"><h3>Chaga Extract</h3><p class="subtitle">Immune support</p><div class="rating">★★★★★ <span>(14)</span></div><p class="price">$39</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop6.jpg"><h3>Reishi Calm</h3><p class="subtitle">Stress relief</p><div class="rating">★★★★★ <span>(18)</span></div><p class="price">$42</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop7.jpg"><h3>Cordyceps</h3><p class="subtitle">Energy booster</p><div class="rating">★★★★★ <span>(10)</span></div><p class="price">$44</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop8.jpg"><h3>Mushroom Matcha</h3><p class="subtitle">Clean focus</p><div class="rating">★★★★★ <span>(8)</span></div><p class="price">$36</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop9.jpg"><h3>Daily Wellness</h3><p class="subtitle">All-in-one kit</p><div class="rating">★★★★★ <span>(7)</span></div><p class="price">$120</p><button>SHOP NOW</button></div>
+    <h4>BENEFITS</h4>
+    <span class="benefit" data-benefit="energy">ENERGY</span>
+    <span class="benefit" data-benefit="sleep">SLEEP</span>
+    <span class="benefit" data-benefit="immunity">IMMUNITY</span>
+  </aside>
 
-<div class="product-card"><img src="images/shop/shop10.jpg"><h3>Focus Blend</h3><p class="subtitle">Mental clarity</p><div class="rating">★★★★★ <span>(6)</span></div><p class="price">$39</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop11.jpg"><h3>Sleep Support</h3><p class="subtitle">Deep rest</p><div class="rating">★★★★★ <span>(8)</span></div><p class="price">$41</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop12.jpg"><h3>Immunity Plus</h3><p class="subtitle">Daily defense</p><div class="rating">★★★★★ <span>(5)</span></div><p class="price">$45</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop13.jpg"><h3>Mind Reset</h3><p class="subtitle">Calm & balance</p><div class="rating">★★★★★ <span>(4)</span></div><p class="price">$37</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop14.jpg"><h3>Energy Stack</h3><p class="subtitle">All-day stamina</p><div class="rating">★★★★★ <span>(9)</span></div><p class="price">$89</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop15.jpg"><h3>Calm Tea</h3><p class="subtitle">Herbal blend</p><div class="rating">★★★★★ <span>(6)</span></div><p class="price">$29</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop16.jpg"><h3>Focus Gummies</h3><p class="subtitle">Tasty focus</p><div class="rating">★★★★★ <span>(12)</span></div><p class="price">$34</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop17.jpg"><h3>Immunity Gummies</h3><p class="subtitle">Daily chew</p><div class="rating">★★★★★ <span>(10)</span></div><p class="price">$34</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop18.jpg"><h3>Sleep Gummies</h3><p class="subtitle">Restful nights</p><div class="rating">★★★★★ <span>(11)</span></div><p class="price">$34</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop19.jpg"><h3>Starter Pack</h3><p class="subtitle">Begin ritual</p><div class="rating">★★★★★ <span>(8)</span></div><p class="price">$99</p><button>SHOP NOW</button></div>
+  <!-- PRODUCTS GRID -->
+  <div class="shop-grid">
 
-<div class="product-card"><img src="images/shop/shop20.jpg"><h3>Wellness Bundle</h3><p class="subtitle">Best value</p><div class="rating">★★★★★ <span>(13)</span></div><p class="price">$149</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop21.jpg"><h3>Daily Ritual</h3><p class="subtitle">Mind & body</p><div class="rating">★★★★★ <span>(9)</span></div><p class="price">$59</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop22.jpg"><h3>Focus Drops</h3><p class="subtitle">Fast absorption</p><div class="rating">★★★★★ <span>(7)</span></div><p class="price">$42</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop23.jpg"><h3>Calm Drops</h3><p class="subtitle">Relax & unwind</p><div class="rating">★★★★★ <span>(6)</span></div><p class="price">$42</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop24.jpg"><h3>Energy Drops</h3><p class="subtitle">Natural boost</p><div class="rating">★★★★★ <span>(8)</span></div><p class="price">$42</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop25.jpg"><h3>Travel Pack</h3><p class="subtitle">On-the-go</p><div class="rating">★★★★★ <span>(5)</span></div><p class="price">$49</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop26.jpg"><h3>Gift Set</h3><p class="subtitle">Perfect gift</p><div class="rating">★★★★★ <span>(4)</span></div><p class="price">$79</p><button>SHOP NOW</button></div>
-<div class="product-card"><img src="images/shop/shop27.jpg"><h3>Ultimate Stack</h3><p class="subtitle">Complete wellness</p><div class="rating">★★★★★ <span>(20)</span></div><p class="price">$199</p><button>SHOP NOW</button></div>
+    <!-- ===== 27 PRODUCT CARDS ===== -->
 
-</section>
-
-<footer><p>© 2026 Rainbo Clone</p></footer>
-
-<div class="search-box" id="searchBox">
-  <input type="text" placeholder="Search products...">
+<!-- 1 -->
+<div class="product-card" data-category="coffee" data-benefit="energy">
+  <img src="images/shop/shop1.jpg">
+  <h3>Fungki Mushroom Coffee</h3>
+  <p class="subtitle">Low-acid, 44mg caffeine</p>
+  <div class="rating">★★★★★ <span>(17)</span></div>
+  <p class="price">$48</p>
+  <button>SHOP NOW</button>
 </div>
 
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h3 id="modalTitle"></h3>
-    <div id="modalText"></div>
-    <button onclick="closeModal()">Close</button>
+<!-- 2 -->
+<div class="product-card" data-category="coffee" data-benefit="energy">
+  <img src="images/shop/shop2.jpg">
+  <h3>Herbal Mushroom Coffee</h3>
+  <p class="subtitle">Caffeine-free adaptogens</p>
+  <div class="rating">★★★★★ <span>(21)</span></div>
+  <p class="price">$48</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 3 -->
+<div class="product-card" data-category="drops" data-benefit="sleep">
+  <img src="images/shop/shop3.jpg">
+  <h3>AM/PM Ritual Stack</h3>
+  <p class="subtitle">Day & night balance</p>
+  <div class="rating">★★★★★ <span>(12)</span></div>
+  <p class="price">$158</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 4 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop4.jpg">
+  <h3>Lion’s Mane</h3>
+  <p class="subtitle">Focus & memory</p>
+  <div class="rating">★★★★★ <span>(9)</span></div>
+  <p class="price">$45</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 5 -->
+<div class="product-card" data-category="drops" data-benefit="immunity">
+  <img src="images/shop/shop5.jpg">
+  <h3>Chaga Extract</h3>
+  <p class="subtitle">Immune support</p>
+  <div class="rating">★★★★★ <span>(14)</span></div>
+  <p class="price">$39</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 6 -->
+<div class="product-card" data-category="drops" data-benefit="sleep">
+  <img src="images/shop/shop6.jpg">
+  <h3>Reishi Calm</h3>
+  <p class="subtitle">Stress relief</p>
+  <div class="rating">★★★★★ <span>(18)</span></div>
+  <p class="price">$42</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 7 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop7.jpg">
+  <h3>Cordyceps</h3>
+  <p class="subtitle">Energy booster</p>
+  <div class="rating">★★★★★ <span>(10)</span></div>
+  <p class="price">$44</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 8 -->
+<div class="product-card" data-category="coffee" data-benefit="energy">
+  <img src="images/shop/shop8.jpg">
+  <h3>Mushroom Matcha</h3>
+  <p class="subtitle">Clean focus</p>
+  <div class="rating">★★★★★ <span>(8)</span></div>
+  <p class="price">$36</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 9 -->
+<div class="product-card" data-category="drops" data-benefit="immunity">
+  <img src="images/shop/shop9.jpg">
+  <h3>Daily Wellness</h3>
+  <p class="subtitle">All-in-one kit</p>
+  <div class="rating">★★★★★ <span>(7)</span></div>
+  <p class="price">$120</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 10 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop10.jpg">
+  <h3>Focus Blend</h3>
+  <p class="subtitle">Mental clarity</p>
+  <div class="rating">★★★★★ <span>(6)</span></div>
+  <p class="price">$39</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 11 -->
+<div class="product-card" data-category="drops" data-benefit="sleep">
+  <img src="images/shop/shop11.jpg">
+  <h3>Sleep Support</h3>
+  <p class="subtitle">Deep rest</p>
+  <div class="rating">★★★★★ <span>(8)</span></div>
+  <p class="price">$41</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 12 -->
+<div class="product-card" data-category="drops" data-benefit="immunity">
+  <img src="images/shop/shop12.jpg">
+  <h3>Immunity Plus</h3>
+  <p class="subtitle">Daily defense</p>
+  <div class="rating">★★★★★ <span>(5)</span></div>
+  <p class="price">$45</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 13 -->
+<div class="product-card" data-category="drops" data-benefit="sleep">
+  <img src="images/shop/shop13.jpg">
+  <h3>Mind Reset</h3>
+  <p class="subtitle">Calm & balance</p>
+  <div class="rating">★★★★★ <span>(4)</span></div>
+  <p class="price">$37</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 14 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop14.jpg">
+  <h3>Energy Stack</h3>
+  <p class="subtitle">All-day stamina</p>
+  <div class="rating">★★★★★ <span>(9)</span></div>
+  <p class="price">$89</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 15 -->
+<div class="product-card" data-category="coffee" data-benefit="sleep">
+  <img src="images/shop/shop15.jpg">
+  <h3>Calm Tea</h3>
+  <p class="subtitle">Herbal blend</p>
+  <div class="rating">★★★★★ <span>(6)</span></div>
+  <p class="price">$29</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 16 -->
+<div class="product-card" data-category="gummies" data-benefit="energy">
+  <img src="images/shop/shop16.jpg">
+  <h3>Focus Gummies</h3>
+  <p class="subtitle">Tasty focus</p>
+  <div class="rating">★★★★★ <span>(12)</span></div>
+  <p class="price">$34</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 17 -->
+<div class="product-card" data-category="gummies" data-benefit="immunity">
+  <img src="images/shop/shop17.jpg">
+  <h3>Immunity Gummies</h3>
+  <p class="subtitle">Daily chew</p>
+  <div class="rating">★★★★★ <span>(10)</span></div>
+  <p class="price">$34</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 18 -->
+<div class="product-card" data-category="gummies" data-benefit="sleep">
+  <img src="images/shop/shop18.jpg">
+  <h3>Sleep Gummies</h3>
+  <p class="subtitle">Restful nights</p>
+  <div class="rating">★★★★★ <span>(11)</span></div>
+  <p class="price">$34</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 19 -->
+<div class="product-card" data-category="drops" data-benefit="immunity">
+  <img src="images/shop/shop19.jpg">
+  <h3>Starter Pack</h3>
+  <p class="subtitle">Begin ritual</p>
+  <div class="rating">★★★★★ <span>(8)</span></div>
+  <p class="price">$99</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 20 -->
+<div class="product-card" data-category="drops" data-benefit="immunity">
+  <img src="images/shop/shop20.jpg">
+  <h3>Wellness Bundle</h3>
+  <p class="subtitle">Best value</p>
+  <div class="rating">★★★★★ <span>(13)</span></div>
+  <p class="price">$149</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 21 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop21.jpg">
+  <h3>Daily Ritual</h3>
+  <p class="subtitle">Mind & body</p>
+  <div class="rating">★★★★★ <span>(9)</span></div>
+  <p class="price">$59</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 22 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop22.jpg">
+  <h3>Focus Drops</h3>
+  <p class="subtitle">Fast absorption</p>
+  <div class="rating">★★★★★ <span>(7)</span></div>
+  <p class="price">$42</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 23 -->
+<div class="product-card" data-category="drops" data-benefit="sleep">
+  <img src="images/shop/shop23.jpg">
+  <h3>Calm Drops</h3>
+  <p class="subtitle">Relax & unwind</p>
+  <div class="rating">★★★★★ <span>(6)</span></div>
+  <p class="price">$42</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 24 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop24.jpg">
+  <h3>Energy Drops</h3>
+  <p class="subtitle">Natural boost</p>
+  <div class="rating">★★★★★ <span>(8)</span></div>
+  <p class="price">$42</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 25 -->
+<div class="product-card" data-category="drops" data-benefit="immunity">
+  <img src="images/shop/shop25.jpg">
+  <h3>Travel Pack</h3>
+  <p class="subtitle">On-the-go</p>
+  <div class="rating">★★★★★ <span>(5)</span></div>
+  <p class="price">$49</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 26 -->
+<div class="product-card" data-category="drops" data-benefit="immunity">
+  <img src="images/shop/shop26.jpg">
+  <h3>Gift Set</h3>
+  <p class="subtitle">Perfect gift</p>
+  <div class="rating">★★★★★ <span>(4)</span></div>
+  <p class="price">$79</p>
+  <button>SHOP NOW</button>
+</div>
+
+<!-- 27 -->
+<div class="product-card" data-category="drops" data-benefit="energy">
+  <img src="images/shop/shop27.jpg">
+  <h3>Ultimate Stack</h3>
+  <p class="subtitle">Complete wellness</p>
+  <div class="rating">★★★★★ <span>(20)</span></div>
+  <p class="price">$199</p>
+  <button>SHOP NOW</button>
+</div>
+
+
+  
+
   </div>
-</div>
+</section>
 
-<script>
-let cart=0;
-const modal=document.getElementById("modal");
-const modalTitle=document.getElementById("modalTitle");
-const modalText=document.getElementById("modalText");
-const cartCount=document.getElementById("cartCount");
-const searchBox=document.getElementById("searchBox");
-const searchInput=searchBox.querySelector("input");
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
 
-function openModal(t,h){modalTitle.innerText=t;modalText.innerHTML=h;modal.style.display="flex"}
-function closeModal(){modal.style.display="none"}
+  <div class="footer-grid">
+    <div>
+      <h4>Curious Shroomers</h4>
+      <p>Receive 15% off your first order and be the first to know about new products.</p>
+      <input type="email" placeholder="Email">
+      <button>SUBSCRIBE</button>
+    </div>
 
-document.querySelectorAll(".product-card").forEach(card=>{
-  const name=card.querySelector("h3").innerText;
-  const sub=card.querySelector(".subtitle").innerText;
-  const price=card.querySelector(".price").innerText;
-  card.onclick=e=>{
-    if(e.target.tagName==="BUTTON")return;
-    openModal(name,`<b>${price}</b><br><br>${sub}<br><br>⭐⭐⭐⭐⭐ Loved by customers`);
-  }
-});
+    <div>
+      <h4>Account</h4>
+      <ul>
+        <li>Sign in / Create</li>
+        <li>Wholesale</li>
+        <li>Gift card</li>
+      </ul>
+    </div>
 
-document.querySelectorAll(".product-card button").forEach(btn=>{
-  btn.onclick=e=>{
-    e.stopPropagation();
-    cart++;
-    cartCount.innerText=`Cart (${cart})`;
-    openModal("Checkout",
-      `<button class="option-btn" onclick="pay('Card')">Pay with Card</button>
-       <button class="option-btn" onclick="pay('Cash on Delivery')">Cash on Delivery</button>`
-    );
-  }
-});
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li>Ambassadors & Affiliates</li>
+        <li>Sustainability</li>
+        <li>Recipes</li>
+        <li>Blog</li>
+        <li>Podcast</li>
+      </ul>
+    </div>
 
-function pay(t){openModal("Order Confirmed",`✅ Payment: <b>${t}</b><br>Your order placed`)}
+    <div>
+      <h4>Info</h4>
+      <ul>
+        <li>Contact Us</li>
+        <li>FAQ</li>
+        <li>Stockists</li>
+        <li>Orders and Shipping</li>
+        <li>Careers</li>
+      </ul>
+    </div>
 
-document.getElementById("searchBtn").onclick=e=>{
-  e.preventDefault();
-  searchBox.style.display=searchBox.style.display==="block"?"none":"block"
-};
-searchInput.onkeyup=()=>{
-  const v=searchInput.value.toLowerCase();
-  document.querySelectorAll(".product-card").forEach(c=>{
-    c.style.display=c.innerText.toLowerCase().includes(v)?"block":"none";
-  });
-};
+    <div>
+      <h4>Follow</h4>
+      <div class="social">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-spotify"></i>
+        <i class="fab fa-pinterest"></i>
+      </div>
+    </div>
+  </div>
 
-document.getElementById("reviewsBtn").onclick=e=>{
-  e.preventDefault();
-  openModal("Customer Reviews","⭐⭐⭐⭐⭐ Excellent quality<br><br>⭐⭐⭐⭐⭐ Fast results");
-};
-document.getElementById("loginBtn").onclick=e=>{e.preventDefault();openModal("Login","Coming soon")};
-document.getElementById("quizBtn").onclick=e=>{e.preventDefault();openModal("Quiz","Coming soon")};
-document.getElementById("rainboWorld").onclick=e=>{e.preventDefault();openModal("Rainbo World","Coming soon")};
-</script>
+  <div class="footer-bottom">
+    © 2026 Rainbo™. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="js/shop.js"></script>
 
 </body>
 </html>
-<script>
-  const navLinks = document.querySelectorAll("nav a");
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-      navLinks.forEach(l => l.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-</script>
-

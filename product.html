@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details | Rainbo Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+  <div class="product-wrapper">
+    <div class="product-card">
+
+      <img id="productImage" alt="Product Image">
+
+      <h1 id="productTitle"></h1>
+
+      <p id="productSubtitle"></p>
+
+      <h2 id="productPrice"></h2>
+
+      <button class="back-btn" onclick="goBack()">BACK TO SHOP</button>
+
+    </div>
+  </div>
+
+<script>
+  // Load product data from localStorage
+  document.getElementById("productTitle").innerText =
+    localStorage.getItem("productTitle") || "Product Name";
+
+  document.getElementById("productPrice").innerText =
+    localStorage.getItem("productPrice") || "$0";
+
+  document.getElementById("productImage").src =
+    localStorage.getItem("productImage") || "";
+
+  document.getElementById("productSubtitle").innerText =
+    localStorage.getItem("productSubtitle") || "";
+
+  function goBack() {
+    window.location.href = "shop.html";
+  }
+</script>
+
+</body>
+</html>
