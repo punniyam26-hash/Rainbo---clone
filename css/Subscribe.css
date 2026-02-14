@@ -121,17 +121,18 @@ flex-direction: row;
   padding: 20px;
 }
 
-.card {
+.card-wrapper .card {
   /* background: #fff; */
   border-radius: 10px;
   padding: 12px;
-  height:200px;
+  height:350px;
   width: 200px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 50px;
 }
 
-.card img {
+.card-wrapper .card img {
   width: 100%;
   
   height: 200px;
@@ -155,71 +156,114 @@ flex-direction: row;
   width: 100px;
   text-decoration: none;
 }
+/* ==================cocnis========= */
+/* ================== CONSISTENCY SECTION ================== */
+.consis{
+  padding:60px 5%;
+}
+
 .consistency{
-    
-    height: 300px;
-    width: 100%;
-    background-color:rgb(117, 124, 146);
-    margin-top: 50px;
-    padding: 50px;
-}
-.consistency p{
-    font-size: 30px;
-    font-weight: 500;
+  text-align:center;
+  margin-bottom:40px;
 }
 
-.consistency h2{
-    font-size: 40px;
-    font-weight: 700;
-}
 .consistency-2{
-      display: flex;
-      flex-direction: column;
-      padding: 30px;
-}
-.consistency-2 p{
-     font-size: 30px;
-    font-weight: 700;
-    
-}
-.consistency-2 h1{
-     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    font-weight:bold;
-}
-.consistency-2 h3{
-    font-weight: 700;
+  text-align:center;
+  margin-bottom:50px;
 }
 
+/* ================== PRODUCTS GRID ================== */
+.products{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px;
+  padding:0 5%;
+}
 
-/* Card base */
-.card {
-  /* background: #fff; */
-  border-radius: 14px;
-  height: 450px;
-  width: 400px;
-  padding: 15px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+/* ================== CARD ================== */
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
 }
-.rows{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 200px;
-    margin-top: 50px;
+
+.card:hover{
+  transform:translateY(-5px);
 }
-.rows-1{
-    display: flex;
-    flex-direction: row;
-    
-    margin-left: 800px;
-    margin-top: 50px;
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
 }
+
+.card h3{
+  margin:15px 0 10px;
+}
+
+.rating{
+  color:orange;
+  font-size:14px;
+}
+
+.price{
+  font-weight:bold;
+  margin:10px 0;
+}
+
 .btn{
-    border: 2px solid black;
-    background-color: #71ae66;
-    height: 40px;
-    width: 200px;
-    border-radius: 10px;
+  padding:10px 20px;
+  border:none;
+  background:black;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:#333;
+}
+
+/* ================== TABLET ================== */
+@media (max-width: 1024px){
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================== MOBILE SIDE BY SIDE SCROLL ================== */
+@media (max-width: 600px){
+
+  .products{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:15px;
+    padding:0 20px;
+  }
+
+  .products::-webkit-scrollbar{
+    display:none;
+  }
+
+  .card{
+    min-width:48%;
+    flex:0 0 auto;
+    scroll-snap-align:start;
+  }
+
+  .card img{
+    height:150px;
+  }
+
+}
+/* ==================processs========= */
+.process{
+  margin-top: 70px;
 }
 .sm-card{
     height: 115px;
@@ -556,20 +600,23 @@ flex-direction: row;
 
 }
 .paraghrap h2{
+  margin-top: 20px;
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 .paraghrap h3{
-    font-size: 25px;
+    font-size: 40px;
     font-family:sans-serif;
     font-weight: 700;
+    margin-top: 25px;
 
 }
 .paraghrap h5{
-    font-size: 25px;
+    font-size: 40px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
+    margin-top: 20px;
     margin-bottom: 30px;
 
 }
@@ -602,8 +649,8 @@ flex-direction: row;
   /* -----------Consistance---- */
   .consistency{
     
-    height: 400px;
-    width: 100%;
+    height: 300px;
+    width: 500px;
     background-color:rgb(124, 127, 128);
     /* margin-top: 50px; */
     padding: 25px;
@@ -639,8 +686,55 @@ flex-direction: row;
 /* =================shop container========= */
 
 
+  .products{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
 
+  .products::-webkit-scrollbar{
+    display:none;
+  }
 
+  .card{
+    width:300px;
+    height: 500px;
+    flex:0 0 auto;
+    scroll-snap-align:start;
+    /* margin-left: -200px; */
+  }
+.more{
+  padding: 10px;
+  margin-top: 30px;
+  height: 350px;
+  background-color: rgb(235, 229, 218);
+}
+.con p{
+  font-size: 2rem;
+
+}
+.con h2{
+  font-size: 3rem;
+}
+.con-2{
+  margin-top: 20px;
+}
+.con-2 p{
+  font-size: 2rem;
+  margin-left: 15px;
+}
+.con-2 h1{
+   font-size: 2rem;
+  margin-left: 15px;
+}
+.review p{
+  font-size: 2rem;
+}
+.simplyfy p{
+  font-size: 15px;
+}
   /* ---------------- HERO ---------------- */
   .sub1{
     height: 400px;
@@ -661,7 +755,7 @@ flex-direction: row;
   }
 
   /* ---------------- MONTH CARDS ---------------- */
-  .card-wrapper{
+  /* .card-wrapper{
     flex-direction: column;
     align-items: center;
   }
@@ -669,7 +763,7 @@ flex-direction: row;
   .card{
     width: 90%;
     height: auto;
-  }
+  } */
 
   /* ---------------- SHOP SECTION ---------------- */
   .rows,
@@ -716,8 +810,9 @@ flex-direction: row;
   }
 
   .sim-img img{
-    width: 90%;
-    height: auto;
+   width: 100%;
+   height: 400px;
+   
   }
 
   /* ---------------- FIT SECTION ---------------- */
@@ -955,15 +1050,12 @@ flex-direction: row;
     cursor: pointer;
   }
 }
-
-  
-@media (max-width:768px){
-
-  /* ================= FOOTER ================= */
-
-  .footer-container {
+@media (max-width:480px){
+  /* =================footer========== */
+.footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
     gap: 30px;
   }
 
@@ -984,7 +1076,7 @@ flex-direction: row;
 
   /* Info full width below */
   .footer-col:nth-child(4) {
-    grid-column: 1 / -1;   /* FIXED */
+    grid-column: 1 / 1;
   }
 
   /* Bottom row centered */
