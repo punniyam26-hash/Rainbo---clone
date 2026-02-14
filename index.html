@@ -13,13 +13,14 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<nav class="navbar">
+ <header>
+  <nav class="navbar">
   <div class="nav-left">
     <a href="./index.html" class="active">Home</a>
     <a href="./shop.html">Shop</a>
     <a href="./learn.html">Learn</a>
-    <a href="./Rainbo.html">Rainbo World</a>
-    <a href="./Subscribe.html">Subscribe + Save</a>
+    <a href="./Rainbo.html" >Rainbo World</a>
+    <a href="./Subscribe.html" >Subscribe + Save</a>
   </div>
 
   <div class="nav-logo">
@@ -28,19 +29,33 @@
   </div>
 
   <div class="nav-right">
-    <a href="./shop.html">Shop</a>
     <a href="#">Take the Quiz</a>
     <a href="#">Reviews</a>
     <i class="fas fa-search"></i>
     <a href="#">Login</a>
     <a href="#">Cart (0)</a>
-    
   </div>
    <div class="hamburger" id="hamburger">
     ☰
   </div>  
 </nav>
+<!-- ===mobile==== -->
+ <div class="mobile-menu" id="mobileMenu">
 
+  <span id="closeBtn">✕</span>
+
+  <a href="shop.html">Shop</a>
+  <a href="learn.html">Learn</a>
+  <a href="Rainbo.html">Rainbo World</a>
+  <a href="./Subscribe.html">Subscribe</a>
+  
+  
+
+  <a href="#">Take the Quiz</a>
+  <a href="#">Reviews</a>
+  <a href="#">Login</a>
+  <a href="#">Cart</a>
+</div>
 <!-- ================= HERO / BANNER ================= -->
 <section class="hero">
   <div class="hero-text">
@@ -518,26 +533,22 @@
   });
 </script>
 
-<!-- ================= MOBILE MENU SCRIPT ================= -->
-<!-- <script>
-  const menuToggle = document.getElementById("menuToggle");
-const headerLeftNav = document.getElementById("mainNav");
-
-menuToggle.addEventListener("click", () => {
-  headerLeftNav.style.flexDirection = headerLeftNav.style.flexDirection=== "flex" 
-    ? "none" 
-    : "flex";
-});
-</script> -->
 <script>
-  const hamburger = document.getElementById("hamburger");
-  const navLeft = document.querySelector(".nav-left");
-  const navRight = document.querySelector(".nav-right");
+document.addEventListener("DOMContentLoaded", function () {
 
-  hamburger.addEventListener("click", () => {
-    navLeft.classList.toggle("active");
-    navRight.classList.toggle("active");
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeBtn");
+
+  hamburger.addEventListener("click", function () {
+    mobileMenu.classList.add("active");
   });
+
+  closeBtn.addEventListener("click", function () {
+    mobileMenu.classList.remove("active");
+  });
+
+});
 </script>
 
 
