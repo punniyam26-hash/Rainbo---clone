@@ -171,7 +171,26 @@ flex-direction: row;
   text-align:center;
   margin-bottom:50px;
 }
+.more{
+  width:100%;
+  height: 200px;
+  background-color: #c4c2c2;
+}
+.more .consistency h3{
+  margin-top: 40px;
 
+}
+.more .consistency h4{
+  margin-top: 40px;
+  font-size: 2rem;
+
+}
+.con-2 {
+  padding-left: 20px;
+}
+.con-2 p{
+  font-size: 2rem;
+}
 /* ================== PRODUCTS GRID ================== */
 .products{
   display:grid;
@@ -227,7 +246,15 @@ flex-direction: row;
 .btn:hover{
   background:#333;
 }
+.review p{
+  margin-left: 20px;
+  font-size: 1rem;
+  font-weight: 600;
 
+}
+.review h1{
+margin-left: 20px;
+}
 /* ================== TABLET ================== */
 @media (max-width: 1024px){
   .products{
