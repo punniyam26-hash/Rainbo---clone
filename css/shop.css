@@ -468,7 +468,7 @@ body{
   .product-card img{
     height:160px;
   }
-
+}
 @media (max-width:480px){
 
   /* Prevent horizontal scroll */
