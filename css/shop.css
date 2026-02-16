@@ -51,6 +51,15 @@ body{
   border-radius: 5px;
 }
 
+/* .navbar a.active {
+  background-color:black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+} */
+
+
+
 .center-logo img{
   height:28px;
 }
@@ -547,4 +556,3 @@ body{
   }
 
 }
-
